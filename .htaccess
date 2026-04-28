@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /company_portfolio-main/company_portfolio/
+RewriteBase /company_portfolio/
 Options -MultiViews +FollowSymLinks
 DirectoryIndex index.php
 
