@@ -210,7 +210,7 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                     <a href="?tab=research.patents_summary" class="nav-sub-item <?= $active_tab=='research.patents_summary'?'active':'' ?>">Patents Summary</a>
                     <a href="?tab=research.areas" class="nav-sub-item <?= $active_tab=='research.areas'?'active':'' ?>">Research Areas</a>
                     <a href="?tab=research.thesis" class="nav-sub-item <?= $active_tab=='research.thesis'?'active':'' ?>">Scholars Guided</a>
-                    <a href="?tab=research.shreetech" class="nav-sub-item <?= $active_tab=='research.shreetech'?'active':'' ?>">Industrial Projects</a>
+                    <a href="?tab=research.projects" class="nav-sub-item <?= $active_tab=='research.projects'?'active':'' ?>">Industrial Projects</a>
                 </div>
             </div>
 

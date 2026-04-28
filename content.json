@@ -7,7 +7,7 @@
             "University Professor.",
             "Researcher."
         ],
-        "description": "MCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n\r\n\r\nMCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n",
+        "description": "MCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n\r\n\r\n",
         "image": "assets\/images\/logo\/image.png"
     },
     "customization": {
@@ -167,7 +167,7 @@
             "utility_design_count": "20+",
             "utility_design_label": "International and Indian Utility & Design Patents"
         },
-        "shreetech": {
+        "projects": {
             "title": "Industrial Projects",
             "founder": "ISRD (Integrated Society for Research and Development)",
             "ceo": "Shreetech, a 7-year-old R&D Firm based in Madurai",
@@ -570,7 +570,7 @@
             "desc": "Resource Person for a Two Day Workshop (23 & 24 Sept 2010) at Thiagarajar School of Management."
         }
     ],
-    "research.shreetech": {
+    "research.projects": {
         "title": "Industrial Projects",
         "founder": "ISRD (Integrated Society for Research and Development)",
         "ceo": "Shreetech, a 7-year-old R&D Firm based in Madurai",
