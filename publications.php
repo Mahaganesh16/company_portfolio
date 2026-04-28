@@ -1,0 +1,192 @@
+<?php
+require_once('functions.php');
+$pubs = $p_content['publications'];
+$cust = $p_content['customization'];
+
+$pageTitle = "Publications - " . $cust['site_title'];
+$metaDescription = $cust['meta_description'];
+$extraStyles = '
+<style>
+    .edu-sub-title {
+        font-size: 14px !important;
+        color: #888 !important;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .edu-title {
+        font-size: 24px !important;
+        color: var(--color-secondary) !important;
+        line-height: 1.4 !important;
+        margin: 15px 0 !important;
+    }
+    .edu-para {
+        font-size: 18px !important;
+        color: #444 !important;
+        font-weight: 500 !important;
+        line-height: 1.5 !important;
+    }
+</style>';
+include('header.php');
+?>
+
+    <!-- Section Label & Heading -->
+    <section class="publications-header-area tmp-section-gapTop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head text-center">
+                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
+                            <span class="subtitle">PUBLICATIONS</span>
+                        </div>
+                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Publications</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Journal Papers -->
+    <section class="journal-papers-area tmp-section-gap" id="journals">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50 text-center">
+                        <h3 class="title">International Journal Papers (Total: <?php echo count($pubs['journals']); ?>)</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <?php foreach($pubs['journals'] as $j): ?>
+                    <div class="col-lg-6">
+                        <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                            <h4 class="edu-sub-title"><?php echo $j['id']; ?> <?php echo $j['source']; ?></h4>
+                            <h2 class="edu-title"><?php echo $j['title']; ?></h2>
+                            <p class="edu-para"><?php echo $j['authors']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Conference Papers -->
+    <section class="conference-papers-area tmp-section-gapBottom" id="intl-conferences">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50 text-center">
+                        <h3 class="title">International Conference Papers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <?php foreach($pubs['conferences'] as $c): ?>
+                    <div class="col-lg-6">
+                        <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                            <h4 class="edu-sub-title"><?php echo $c['id']; ?> <?php echo $c['source']; ?></h4>
+                            <h2 class="edu-title"><?php echo $c['title']; ?></h2>
+                            <p class="edu-para"><?php echo $c['details']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- National Conference Papers -->
+    <?php if(isset($pubs['national_conferences'])): ?>
+    <section class="conference-papers-area tmp-section-gapBottom" id="national-conferences">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50 text-center">
+                        <h3 class="title">National Conference Papers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <?php foreach($pubs['national_conferences'] as $nc): ?>
+                    <div class="col-lg-6">
+                        <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                            <h4 class="edu-sub-title"><?php echo $nc['id']; ?> <?php echo $nc['source']; ?></h4>
+                            <h2 class="edu-title"><?php echo $nc['title']; ?></h2>
+                            <p class="edu-para"><?php echo $nc['details']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
+    <!-- Patent Stats Section Start -->
+    <section class="counter-area tmp-section-gapBottom" id="patents">
+        <div class="container text-center">
+            <div class="section-head mb--50">
+                <h3 class="title">Patents Summary</h3>
+            </div>
+            <?php $ps = $p_content['research']['patents_summary']; ?>
+            <div class="row g-5 justify-content-center">
+                <!-- National -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                        <h3 class="counter-title">
+                            <span class="odometer" data-count="<?php echo $ps['national_count']; ?>">00</span>
+                        </h3>
+                        <p class="counter-para"><?php echo $ps['national_label']; ?></p>
+                    </div>
+                </div>
+                <!-- International -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                        <h3 class="counter-title">
+                            <span class="odometer" data-count="<?php echo $ps['intl_count']; ?>">00</span>
+                        </h3>
+                        <p class="counter-para"><?php echo $ps['intl_label']; ?></p>
+                    </div>
+                </div>
+                <!-- Total -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                        <h3 class="counter-title">
+                            <span class="odometer" data-count="<?php echo $ps['total_count']; ?>">00</span>
+                        </h3>
+                        <p class="counter-para"><?php echo $ps['total_label']; ?></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt--40 tmp-scroll-trigger tmp-fade-in">
+                <div class="col-lg-12">
+                    <p class="description">
+                        <strong>Utility & Design:</strong> <?php echo $ps['utility_design_count']; ?> <?php echo $ps['utility_design_label']; ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Published -->
+    <section class="books-area tmp-section-gapBottom" id="books">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50 text-center">
+                        <h3 class="title">Books Published</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <?php foreach($pubs['books'] as $b): ?>
+                    <div class="col-lg-6">
+                        <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
+                            <h4 class="edu-sub-title"><?php echo $b['id']; ?> <?php echo $b['source']; ?></h4>
+                            <h2 class="edu-title"><?php echo $b['title']; ?></h2>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+<?php include('footer.php'); ?>
