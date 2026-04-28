@@ -7,7 +7,7 @@
             "University Professor.",
             "Researcher."
         ],
-        "description": "MCA., M.Phil., M.E., Ph.D \r\n<br> Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand.",
+        "description": "MCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n\r\n\r\nMCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n",
         "image": "assets\/images\/logo\/image.png"
     },
     "customization": {
@@ -110,7 +110,7 @@
         ]
     },
     "research": {
-        "intro": "My research spans Digital Image Processing, MANET (Mobile Ad-hoc Networks), Cryptography, Network Security, Data Mining, and IoT. I completed my M.Phil research on 'Spatial Database for Web Application' and my Ph.D in Digital Image Processing at Manonmanium Sundaranar University (2016). Through Shreetech and ISRD, I have filed 50+ patents and continue to lead cutting-edge R&D projects.",
+        "intro": "My research spans Digital Image Processing, MANET (Mobile Ad-hoc Networks), Cryptography, Network Security, Data Mining, and IoT. I completed my M.Phil research on 'Spatial Database for Web Application' and my Ph.D in Digital Image Processing at Manonmanium Sundaranar University (2016). Through Shreetech and ISRD, I have filed 50+ patents and continue to lead cutting-edge R&D projects.\r\n\r\n",
         "areas": [
             {
                 "title": "MANET",
@@ -569,5 +569,13 @@
             "title": "Web Designing and Photoshop",
             "desc": "Resource Person for a Two Day Workshop (23 & 24 Sept 2010) at Thiagarajar School of Management."
         }
-    ]
+    ],
+    "research.shreetech": {
+        "title": "Industrial Projects",
+        "founder": "ISRD (Integrated Society for Research and Development)",
+        "ceo": "Shreetech, a 7-year-old R&D Firm based in Madurai",
+        "desc": "Shreetech deals with research projects from UGC in joint collaboration with universities and Government R&D Sectors. It is a pioneer in WordPress and Secure Mobile App development using AI, Deep Learning, ML and Data Science.\r\n\r\nShreetech deals with research projects from UGC in joint collaboration with universities and Government R&D Sectors. It is a pioneer in WordPress and Secure Mobile App development using AI, Deep Learning, ML and Data Science.",
+        "clients": "USA | France | Germany | Singapore | Malaysia | New Zealand",
+        "projects": "20+ projects ongoing in EDP, MSME, EDI channels through institute-industry programs."
+    }
 }

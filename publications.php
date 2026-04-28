@@ -62,7 +62,7 @@ include('header.php');
                         <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
                             <h4 class="edu-sub-title"><?php echo $j['id']; ?> <?php echo $j['source']; ?></h4>
                             <h2 class="edu-title"><?php echo $j['title']; ?></h2>
-                            <p class="edu-para"><?php echo $j['authors']; ?></p>
+                            <p class="edu-para"><?php echo nl2br($j['authors']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -86,7 +86,7 @@ include('header.php');
                         <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
                             <h4 class="edu-sub-title"><?php echo $c['id']; ?> <?php echo $c['source']; ?></h4>
                             <h2 class="edu-title"><?php echo $c['title']; ?></h2>
-                            <p class="edu-para"><?php echo $c['details']; ?></p>
+                            <p class="edu-para"><?php echo nl2br($c['details']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -111,7 +111,7 @@ include('header.php');
                         <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
                             <h4 class="edu-sub-title"><?php echo $nc['id']; ?> <?php echo $nc['source']; ?></h4>
                             <h2 class="edu-title"><?php echo $nc['title']; ?></h2>
-                            <p class="edu-para"><?php echo $nc['details']; ?></p>
+                            <p class="edu-para"><?php echo nl2br($nc['details']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

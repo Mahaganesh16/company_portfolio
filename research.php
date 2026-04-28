@@ -19,7 +19,7 @@ include('header.php');
                         </div>
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Research & Innovation</h2>
                         <p class="description mt--30 tmp-scroll-trigger tmp-fade-in">
-                            <?php echo $research['intro']; ?>
+                            <?php echo nl2br($research['intro']); ?>
                         </p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ include('header.php');
                                 <i class="<?php echo $area['icon']; ?>"></i>
                             </div>
                             <h4 class="service-title"><?php echo $area['title']; ?></h4>
-                            <p class="service-para"><?php echo $area['desc']; ?></p>
+                            <p class="service-para"><?php echo nl2br($area['desc']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -135,11 +135,11 @@ include('header.php');
                             <strong>CEO:</strong> <?php echo $s['ceo']; ?>
                         </p>
                         <p class="description mt--20">
-                            <?php echo $s['desc']; ?>
+                            <?php echo nl2br($s['desc']); ?>
                         </p>
                         <p class="description mt--20">
                             <strong>Direct clients from:</strong> <?php echo $s['clients']; ?><br>
-                            <?php echo $s['projects']; ?>
+                            <?php echo nl2br($s['projects']); ?>
                         </p>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ include('header.php');
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card-v1 tmp-scroll-trigger tmp-fade-in tmponhover">
                             <h4 class="service-title"><?php echo $sub['title']; ?></h4>
-                            <p class="service-para"><?php echo $sub['desc']; ?></p>
+                            <p class="service-para"><?php echo nl2br($sub['desc']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -50,7 +50,7 @@ include('header.php');
                     <div class="col-lg-6">
                         <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
                             <h4 class="edu-sub-title" style="font-weight: 700; color: #000;"><?php echo $course['title']; ?></h4>
-                            <p class="edu-para" style="font-size: 16px !important; margin-top: 10px;"><?php echo $course['desc']; ?></p>
+                            <p class="edu-para" style="font-size: 16px !important; margin-top: 10px;"><?php echo nl2br($course['desc']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -103,7 +103,7 @@ include('header.php');
                                 <i class="<?php echo $cert['icon']; ?>"></i>
                             </div>
                             <h4 class="service-title"><?php echo $cert['title']; ?></h4>
-                            <p class="service-para"><?php echo $cert['desc']; ?></p>
+                            <p class="service-para"><?php echo nl2br($cert['desc']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

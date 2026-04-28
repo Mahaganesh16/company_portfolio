@@ -1,19 +1,20 @@
 RewriteEngine On
+RewriteBase /folio/company_portfolio/
 Options -MultiViews +FollowSymLinks
 DirectoryIndex index.php
 
 # 1. Handle /admin to show dashboard without /index.php
-RewriteRule ^admin/?$ admin/index.php [L,QSA]
+RewriteRule ^admin$ %{REQUEST_URI}/ [L,R=301]
+RewriteRule ^admin/$ admin/index.php [L,QSA]
 RewriteRule ^admin/login/?$ admin/login.php [L,QSA]
+RewriteRule ^admin/logout/?$ admin/logout.php [L,QSA]
+RewriteRule ^admin/index/?$ admin/index.php [L,QSA]
 
-# 2. Redirect old dashboard URL to clean admin URL
-RewriteRule ^admin/dashboard/?$ admin [L,R=301]
-
-# 3. Redirect to remove .php extension from URL
+# 2. Redirect to remove .php extension from URL
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /[^/]+/([^\ ]+)\.php
 RewriteRule ^(.*)\.php$ $1 [L,R=301]
 
-# 4. Check if the file exists without .php extension
+# 3. Check if the file exists without .php extension
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]

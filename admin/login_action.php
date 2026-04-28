@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(0, '/');
 session_start();
 
 // In a real application, use a database and password_hash
@@ -11,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user === $valid_username && $pass === $valid_password) {
         $_SESSION['admin_logged_in'] = true;
-        header('Location: ../admin');
+        setcookie('admin_auth', md5('logged_in_success'), time() + (86400 * 30), "/"); 
+        header('Location: index');
         exit;
     } else {
         header('Location: login?error=1');

@@ -29,7 +29,7 @@ include('header.php');
                         <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in">
                             <h4 class="edu-sub-title"><?php echo $talk['location']; ?></h4>
                             <h2 class="edu-title"><?php echo $talk['title']; ?></h2>
-                            <p class="edu-para"><?php echo $talk['desc']; ?></p>
+                            <p class="edu-para"><?php echo nl2br($talk['desc']); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
