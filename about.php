@@ -81,7 +81,7 @@ include('header.php');
                         </div>
                         <?php foreach($about['bio'] as $paragraph): ?>
                             <p class="description tmp-scroll-trigger tmp-fade-in">
-                                <?php echo $paragraph; ?>
+                                <?php echo nl2br($paragraph); ?>
                             </p>
                         <?php endforeach; ?>
                     </div>

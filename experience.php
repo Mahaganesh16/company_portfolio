@@ -33,7 +33,7 @@ include('header.php');
                                 </div>
                                 <div class="col-lg-8">
                                     <h4 class="edu-sub-title"><?php echo $j['location']; ?></h4>
-                                    <p class="edu-para"><?php echo $j['desc']; ?></p>
+                                    <p class="edu-para"><?php echo nl2br($j['desc']); ?></p>
                                 </div>
                             </div>
                         </div>
