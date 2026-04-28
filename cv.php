@@ -14,7 +14,7 @@ $siteData = [
     ],
     'about' => [
         'summary' => implode("\n\n", $p_content['about']['bio']),
-        'education' => array_map(function($edu) {
+        'education' => array_map(function ($edu) {
             $parts = explode(' — ', $edu['year']);
             return [
                 'degree' => $parts[1] ?? '',
@@ -24,7 +24,7 @@ $siteData = [
             ];
         }, $p_content['about']['education'])
     ],
-    'experience' => array_map(function($exp) {
+    'experience' => array_map(function ($exp) {
         return [
             'title' => $exp['role'],
             'duration' => $exp['period'],
@@ -41,14 +41,14 @@ $siteData = [
         ]
     ],
     'publications' => [
-        'journals' => array_map(function($j) {
+        'journals' => array_map(function ($j) {
             return [
                 'title' => $j['title'],
                 'subtitle' => $j['source'] . ' — ' . ($j['authors'] ?? '')
             ];
         }, $p_content['publications']['journals'])
     ],
-    'technical_skills' => array_map(function($s) {
+    'technical_skills' => array_map(function ($s) {
         return [
             'category' => $s['category'],
             'items' => str_replace("\n", ", ", $s['items'])
@@ -58,12 +58,12 @@ $siteData = [
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae - <?php echo $siteData['profile']['name']; ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary: #FF014F;
@@ -72,30 +72,229 @@ $siteData = [
             --light: #f4f4f4;
         }
 
+        @page {
+            size: A4 portrait;
+            margin: 12mm 12mm 12mm 12mm;
+        }
+
         @media print {
-            .no-print { display: none !important; }
-            body { padding: 0; background: #fff; }
-            .cv-container { box-shadow: none !important; width: 100% !important; margin: 0 !important; border:none !important; }
-            a { text-decoration: none; color: #000; }
+            .no-print {
+                display: none !important;
+            }
+
+            html,
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #fff !important;
+                width: 100% !important;
+            }
+
+            .cv-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f0f2f5;
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
             padding: 40px 0;
         }
 
         .cv-container {
-            max-width: 900px;
+            width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             background: #fff;
-            padding: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             position: relative;
             border: 1px solid #eee;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: table;
+            width: 100%;
+        }
+
+        .header-info {
+            display: table-cell;
+            width: 75%;
+            vertical-align: top;
+        }
+
+        .header-info h1 {
+            margin: 0 0 5px 0;
+            font-size: 28px;
+            color: var(--secondary);
+            text-transform: uppercase;
+        }
+
+        .header-info h4 {
+            margin: 5px 0 15px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .contact-grid {
+            width: 100%;
+            display: table;
+        }
+
+        .contact-row {
+            display: table-row;
+        }
+
+        .contact-item {
+            display: table-cell;
+            width: 50%;
+            padding-bottom: 8px;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .contact-item i {
+            margin-right: 6px;
+            color: var(--primary);
+        }
+
+        .profile-img-wrap {
+            display: table-cell;
+            width: 25%;
+            vertical-align: top;
+            text-align: right;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid var(--light);
+        }
+
+        section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: var(--secondary);
+            text-transform: uppercase;
+            border-left: 4px solid var(--primary);
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            background: #fff9fa;
+            font-weight: 700;
+        }
+
+        .item {
+            margin-bottom: 12px;
+        }
+
+        .item-header {
+            font-weight: 700;
+            color: #222;
+            font-size: 14px;
+            display: table;
+            width: 100%;
+        }
+
+        .item-header .title-text {
+            display: table-cell;
+            width: 75%;
+        }
+
+        .item-header .year-text {
+            display: table-cell;
+            width: 25%;
+            text-align: right;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .item-sub {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        .item-desc {
+            font-size: 13px;
+            color: #555;
+            margin-top: 4px;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: table;
+            width: 100%;
+            border-spacing: 8px;
+        }
+
+        .skills-row {
+            display: table-row;
+        }
+
+        .skill-cat {
+            display: table-cell;
+            background: var(--light);
+            padding: 12px;
+            border-radius: 5px;
+            width: 50%;
+            vertical-align: top;
+        }
+
+        .skill-cat strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: var(--secondary);
+        }
+
+        .skill-cat span {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
         }
 
         .print-btn {
@@ -109,122 +308,12 @@ $siteData = [
             border-radius: 50px;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255,1,79,0.3);
+            box-shadow: 0 5px 15px rgba(255, 1, 79, 0.3);
             display: flex;
             align-items: center;
             gap: 10px;
             z-index: 1000;
             text-decoration: none;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-
-        .header-info h1 {
-            margin: 0;
-            font-size: 32px;
-            color: var(--secondary);
-            text-transform: uppercase;
-        }
-
-        .header-info h4 {
-            margin: 5px 0 15px;
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 14px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 3px solid var(--light);
-        }
-
-        section {
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            color: var(--secondary);
-            text-transform: uppercase;
-            border-left: 4px solid var(--primary);
-            padding-left: 15px;
-            margin-bottom: 20px;
-            background: #fff9fa;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        .item {
-            margin-bottom: 15px;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: 700;
-            color: #222;
-        }
-
-        .item-sub {
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .item-desc {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        ul.list {
-            padding-left: 20px;
-            margin: 5px 0;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .skill-cat {
-            background: var(--light);
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .skill-cat strong {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 13px;
-        }
-
-        .skill-cat span {
-            font-size: 12px;
-            color: #555;
         }
 
         .back-btn {
@@ -237,9 +326,11 @@ $siteData = [
             align-items: center;
             gap: 5px;
             font-weight: 600;
+            z-index: 1000;
         }
     </style>
 </head>
+
 <body>
 
     <a href="index.php" class="back-btn no-print"><i class="fa-solid fa-arrow-left"></i> Back to Site</a>
@@ -254,28 +345,40 @@ $siteData = [
                 <h1><?php echo $siteData['profile']['name']; ?></h1>
                 <h4><?php echo $siteData['profile']['title']; ?></h4>
                 <div class="contact-grid">
-                    <div class="contact-item"><i class="fa-solid fa-envelope"></i> <?php echo $siteData['profile']['email']; ?></div>
-                    <div class="contact-item"><i class="fa-solid fa-phone"></i> <?php echo $siteData['profile']['phone']; ?></div>
-                    <div class="contact-item"><i class="fa-solid fa-location-dot"></i> <?php echo $siteData['profile']['address']; ?></div>
-                    <div class="contact-item"><i class="fa-solid fa-globe"></i> Professional Portfolio</div>
+                    <div class="contact-row">
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i>
+                            <?php echo $siteData['profile']['email']; ?></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i>
+                            <?php echo $siteData['profile']['phone']; ?></div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i>
+                            <?php echo $siteData['profile']['address']; ?></div>
+                        <div class="contact-item"><i class="fa-solid fa-globe"></i> Professional Portfolio</div>
+                    </div>
                 </div>
             </div>
-            <img src="<?php echo $siteData['profile']['image'] ?? 'assets/images/logo/image.png'; ?>" alt="Profile" class="profile-img">
+            <div class="profile-img-wrap">
+                <img src="<?php echo $siteData['profile']['image'] ?? 'assets/images/logo/image.png'; ?>" alt="Profile"
+                    class="profile-img">
+            </div>
         </header>
 
         <section>
             <div class="section-title">Professional Summary</div>
-            <p style="font-size: 15px;"><?php echo $siteData['about']['summary'] ?? $siteData['profile']['summary']; ?></p>
+            <p style="font-size: 15px;"><?php echo $siteData['about']['summary'] ?? $siteData['profile']['summary']; ?>
+            </p>
         </section>
 
         <section>
             <div class="section-title">Education</div>
             <?php foreach ($siteData['about']['education'] as $edu): ?>
-                <?php if (isset($edu['status']) && $edu['status'] === 'inactive') continue; ?>
+                <?php if (isset($edu['status']) && $edu['status'] === 'inactive')
+                    continue; ?>
                 <div class="item">
                     <div class="item-header">
-                        <span><?php echo $edu['degree']; ?> - <?php echo $edu['title']; ?></span>
-                        <span><?php echo $edu['year']; ?></span>
+                        <span class="title-text"><?php echo $edu['degree']; ?> - <?php echo $edu['title']; ?></span>
+                        <span class="year-text"><?php echo $edu['year']; ?></span>
                     </div>
                     <div class="item-sub"><?php echo $edu['university']; ?></div>
                 </div>
@@ -285,11 +388,12 @@ $siteData = [
         <section>
             <div class="section-title">Professional Experience</div>
             <?php foreach ($siteData['experience'] as $exp): ?>
-                <?php if (isset($exp['status']) && $exp['status'] === 'inactive') continue; ?>
+                <?php if (isset($exp['status']) && $exp['status'] === 'inactive')
+                    continue; ?>
                 <div class="item">
                     <div class="item-header">
-                        <span><?php echo $exp['title']; ?></span>
-                        <span><?php echo $exp['duration']; ?></span>
+                        <span class="title-text"><?php echo $exp['title']; ?></span>
+                        <span class="year-text"><?php echo $exp['duration']; ?></span>
                     </div>
                     <div class="item-sub"><?php echo $exp['location']; ?></div>
                     <div class="item-desc"><?php echo $exp['desc']; ?></div>
@@ -312,7 +416,8 @@ $siteData = [
             <div class="section-title">Publications (Recent Journals)</div>
             <ul class="list" style="font-size: 13px;">
                 <?php foreach (array_slice($siteData['publications']['journals'], 0, 8) as $j): ?>
-                    <?php if (isset($j['status']) && $j['status'] === 'inactive') continue; ?>
+                    <?php if (isset($j['status']) && $j['status'] === 'inactive')
+                        continue; ?>
                     <li><strong><?php echo $j['title']; ?></strong> - <?php echo $j['subtitle']; ?></li>
                 <?php endforeach; ?>
             </ul>
@@ -321,50 +426,42 @@ $siteData = [
         <section>
             <div class="section-title">Technical Skills</div>
             <div class="skills-grid">
-                <?php foreach ($siteData['technical_skills'] as $skill): ?>
-                    <?php if (isset($skill['status']) && $skill['status'] === 'inactive') continue; ?>
-                    <div class="skill-cat">
-                        <strong><?php echo $skill['category']; ?></strong>
-                        <span><?php echo $skill['items']; ?></span>
+                <?php
+                $skills = array_filter($siteData['technical_skills'], function ($s) {
+                    return !(isset($s['status']) && $s['status'] === 'inactive');
+                });
+                $skills = array_values($skills);
+                for ($i = 0; $i < count($skills); $i += 2):
+                    ?>
+                    <div class="skills-row">
+                        <div class="skill-cat">
+                            <strong><?php echo $skills[$i]['category']; ?></strong>
+                            <span><?php echo $skills[$i]['items']; ?></span>
+                        </div>
+                        <?php if (isset($skills[$i + 1])): ?>
+                            <div class="skill-cat">
+                                <strong><?php echo $skills[$i + 1]['category']; ?></strong>
+                                <span><?php echo $skills[$i + 1]['items']; ?></span>
+                            </div>
+                        <?php else: ?>
+                            <div class="skill-cat" style="background:transparent;"></div>
+                        <?php endif; ?>
                     </div>
-                <?php endforeach; ?>
+                <?php endfor; ?>
             </div>
         </section>
 
-        <footer style="margin-top: 50px; text-align: center; font-size: 12px; color: #aaa; border-top: 1px solid #eee; padding-top: 20px;">
+        <footer
+            style="margin-top: 50px; text-align: center; font-size: 12px; color: #aaa; border-top: 1px solid #eee; padding-top: 20px;">
             This CV is dynamically generated from <?php echo $siteData['profile']['name']; ?>'s Professional Portfolio.
         </footer>
     </div>
 
     <script>
         function downloadPDF() {
-            const element = document.querySelector('.cv-container');
-            const opt = {
-                margin:       [10, 10, 10, 10],
-                filename:     'CV_<?php echo str_replace(' ', '_', $siteData['profile']['name']); ?>.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true, logging: false },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-
-            const btn = document.querySelector('.print-btn');
-            const originalContent = btn.innerHTML;
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
-            btn.style.opacity = '0.7';
-            btn.disabled = true;
-
-            html2pdf().set(opt).from(element).save().then(() => {
-                btn.innerHTML = originalContent;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }).catch(err => {
-                console.error('PDF Error:', err);
-                btn.innerHTML = originalContent;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-                alert('There was an error generating the PDF. Please try printing (Ctrl+P) instead.');
-            });
+            window.print();
         }
     </script>
 </body>
+
 </html>
