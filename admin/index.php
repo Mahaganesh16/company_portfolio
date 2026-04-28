@@ -1,6 +1,7 @@
 <?php
+session_set_cookie_params(0, '/');
 session_start();
-if(!isset($_SESSION['admin_logged_in'])) {
+if(!isset($_SESSION['admin_logged_in']) && (!isset($_COOKIE['admin_auth']) || $_COOKIE['admin_auth'] !== md5('logged_in_success'))) {
     header('Location: login');
     exit;
 }
@@ -255,8 +256,9 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
             <!-- Expert Talks -->
             <a href="?tab=talks" class="nav-item <?= $active_tab=='talks'?'active':'' ?>"><i class="fa-solid fa-microphone"></i> Expert Talks</a>
         </div>
-        <div class="p-3">
-            <a href="logout" class="nav-item" style="color: #fb7185;"><i class="fa-solid fa-power-off"></i> Logout</a>
+        <div class="p-3 mt-auto">
+            <form action="logout.php" method="POST" id="logout-form" style="display: none;"></form>
+            <a href="javascript:void(0)" onclick="if(confirm('Logout?')) document.getElementById('logout-form').submit();" class="nav-item logout-link" style="color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.2);"><i class="fa-solid fa-power-off"></i> Logout</a>
         </div>
     </div>
 
