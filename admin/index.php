@@ -539,6 +539,22 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                                             <img src="../<?= $val ?>" class="upload-preview active mt-3 mx-auto" style="width:150px; height:150px; border-radius:20px; border:4px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                                         </div>
                                     </div>
+                                <?php elseif($key === 'background_color'): ?>
+                                    <select name="data[<?= $key ?>]" class="form-control">
+                                        <option value="#ffffff" <?= $val === '#ffffff' ? 'selected' : '' ?>>Default White (#ffffff)</option>
+                                        <option value="#f8fafc" <?= $val === '#f8fafc' ? 'selected' : '' ?>>Light Slate (#f8fafc)</option>
+                                        <option value="#fdfbf7" <?= $val === '#fdfbf7' ? 'selected' : '' ?>>Warm Cream (#fdfbf7)</option>
+                                        <option value="#f0f4f8" <?= $val === '#f0f4f8' ? 'selected' : '' ?>>Cool Blue-Gray (#f0f4f8)</option>
+                                    </select>
+                                <?php elseif($key === 'font_family'): ?>
+                                    <select name="data[<?= $key ?>]" class="form-control">
+                                        <option value="'Plus Jakarta Sans', sans-serif" <?= strpos($val, 'Jakarta') !== false ? 'selected' : '' ?>>Plus Jakarta Sans</option>
+                                        <option value="'Inter', sans-serif" <?= strpos($val, 'Inter') !== false ? 'selected' : '' ?>>Inter</option>
+                                        <option value="'Roboto', sans-serif" <?= strpos($val, 'Roboto') !== false ? 'selected' : '' ?>>Roboto</option>
+                                        <option value="'Poppins', sans-serif" <?= strpos($val, 'Poppins') !== false ? 'selected' : '' ?>>Poppins</option>
+                                    </select>
+                                <?php elseif($key === 'primary_color'): ?>
+                                    <input type="color" name="data[<?= $key ?>]" class="form-control p-1" value="<?= htmlspecialchars($val) ?>" style="height: 45px; width: 100%;">
                                 <?php elseif(!is_array($val)): ?>
                                     <input type="text" name="data[<?= $key ?>]" class="form-control" value="<?= htmlspecialchars($val) ?>">
                                 <?php endif; ?>

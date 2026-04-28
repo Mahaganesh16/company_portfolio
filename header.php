@@ -16,6 +16,9 @@ $about = $p_content['about'];
     <meta name="description" content="<?php echo $metaDescription ?? $cust['meta_description']; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
     <title><?php echo $pageTitle ?? $cust['site_title']; ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap min css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.css">
@@ -29,6 +32,15 @@ $about = $p_content['about'];
     <style>
         :root {
             --color-primary: <?php echo $cust['primary_color']; ?> !important;
+            --font-primary: <?php echo $cust['font_family'] ?? "'Plus Jakarta Sans', sans-serif"; ?> !important;
+        }
+        
+        body {
+            background-color: <?php echo $cust['background_color'] ?? '#ffffff'; ?> !important;
+        }
+
+        body, p, h1, h2, h3, h4, h5, h6, a, span, div, li, ul, button, input, textarea {
+            font-family: var(--font-primary) !important;
         }
         /* Global Header Spacing */
         .tmp-header-area-start {
@@ -209,24 +221,24 @@ $about = $p_content['about'];
                 <div class="content-wrapper">
                     <div class="image-area-feature">
                         <a href="index.php">
-                            <img src="<?php echo $hero['image']; ?>" alt="<?php echo $hero['name']; ?>">
+                            <img src="<?php echo $cust['sidebar_image'] ?? $hero['image']; ?>" alt="<?php echo $cust['logo_text'] ?? 'Profile'; ?>">
                         </a>
                     </div>
-                    <h5 class="title mt--30"><?php echo implode(', ', array_slice($hero['designations'], 0, 3)); ?></h5>
-                    <p class="disc"><?php echo strip_tags($hero['description']); ?></p>
+                    <h5 class="title mt--30"><?php echo $cust['sidebar_title'] ?? implode(', ', array_slice($hero['designations'], 0, 3)); ?></h5>
+                    <p class="disc"><?php echo $cust['sidebar_description'] ?? strip_tags($hero['description']); ?></p>
                     <div class="short-contact-area">
                         <div class="single-contact">
                             <i class="fa-solid fa-phone"></i>
                             <div class="information tmp-link-animation">
                                 <span>Call Now</span>
-                                <a href="tel:<?php echo str_replace(' ', '', $contact['phone']); ?>" class="number"><?php echo $contact['phone']; ?></a>
+                                <a href="tel:<?php echo str_replace(' ', '', $cust['sidebar_phone'] ?? $contact['phones'][0] ?? ''); ?>" class="number"><?php echo $cust['sidebar_phone'] ?? $contact['phones'][0] ?? ''; ?></a>
                             </div>
                         </div>
                         <div class="single-contact">
                             <i class="fa-solid fa-envelope"></i>
                             <div class="information tmp-link-animation">
                                 <span>Mail Us</span>
-                                <a href="mailto:<?php echo $contact['email']; ?>" class="number"><?php echo $contact['email']; ?></a>
+                                <a href="mailto:<?php echo $cust['sidebar_email'] ?? $contact['email']; ?>" class="number"><?php echo $cust['sidebar_email'] ?? $contact['email']; ?></a>
                             </div>
                         </div>
                         <div class="single-contact">
@@ -240,7 +252,7 @@ $about = $p_content['about'];
                             <i class="fa-solid fa-location-crosshairs"></i>
                             <div class="information tmp-link-animation">
                                 <span>Address</span>
-                                <span class="number"><?php echo $contact['address']; ?></span>
+                                <span class="number"><?php echo $cust['sidebar_address'] ?? $contact['mailing_address'] ?? ''; ?></span>
                             </div>
                         </div>
                     </div>
