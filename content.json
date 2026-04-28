@@ -7,7 +7,8 @@
             "University Professor.",
             "Researcher."
         ],
-        "description": "MCA., M.Phil., M.E., Ph.D \r\nDr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand. \r\n\r\n\r\n",
+        "degrees": "MCA., M.Phil., M.E., Ph.D",
+        "description": "Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand.",
         "image": "assets\/images\/logo\/image.png"
     },
     "customization": {

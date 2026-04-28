@@ -34,7 +34,7 @@ include('header.php');
                                 </span>
                                 </span>
                             </h4>
-                            <p class="disc tmp-scroll-trigger tmp-fade-in animation-order-3"><?php echo nl2br($hero['description']); ?></p>
+                            <p class="disc tmp-scroll-trigger tmp-fade-in animation-order-3"><?php echo ($hero['degrees'] ?? '') . '<br>' . nl2br(trim($hero['description'])); ?></p>
                             <div class="button-area-banner-one tmp-scroll-trigger tmp-fade-in animation-order-4">
                                 <a class="tmp-btn hover-icon-reverse radius-round" href="about">
                                     <span class="icon-reverse-wrapper">
