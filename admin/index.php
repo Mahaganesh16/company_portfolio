@@ -220,14 +220,23 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                 </div>
             </div>
 
-            <!-- Professional -->
-            <div class="nav-group <?= (strpos($active_tab, 'experience') !== false || strpos($active_tab, 'teaching') !== false) ? 'active' : '' ?>">
+            <!-- Experience -->
+            <div class="nav-group <?= strpos($active_tab, 'experience') !== false ? 'active' : '' ?>">
                 <div class="nav-group-header" onclick="this.parentElement.classList.toggle('active')">
-                    <i class="fa-solid fa-briefcase"></i> Professional <i class="fa-solid fa-chevron-down chevron"></i>
+                    <i class="fa-solid fa-briefcase"></i> Experience <i class="fa-solid fa-chevron-down chevron"></i>
                 </div>
                 <div class="nav-group-content">
                     <a href="?tab=experience.journey" class="nav-sub-item <?= $active_tab=='experience.journey'?'active':'' ?>">Work Experience</a>
                     <a href="?tab=experience.examinership" class="nav-sub-item <?= $active_tab=='experience.examinership'?'active':'' ?>">Examinership</a>
+                </div>
+            </div>
+
+            <!-- Teaching -->
+            <div class="nav-group <?= strpos($active_tab, 'teaching') !== false ? 'active' : '' ?>">
+                <div class="nav-group-header" onclick="this.parentElement.classList.toggle('active')">
+                    <i class="fa-solid fa-chalkboard-user"></i> Teaching <i class="fa-solid fa-chevron-down chevron"></i>
+                </div>
+                <div class="nav-group-content">
                     <a href="?tab=teaching.subjects" class="nav-sub-item <?= $active_tab=='teaching.subjects'?'active':'' ?>">Subjects Taught</a>
                     <a href="?tab=teaching.courses" class="nav-sub-item <?= $active_tab=='teaching.courses'?'active':'' ?>">Courses Handled</a>
                     <a href="?tab=teaching.mentoring" class="nav-sub-item <?= $active_tab=='teaching.mentoring'?'active':'' ?>">Academic Mentoring</a>
