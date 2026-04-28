@@ -200,6 +200,7 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                 </div>
                 <div class="nav-group-content">
                     <a href="?tab=research" class="nav-sub-item <?= $active_tab=='research'?'active':'' ?>">Research Info</a>
+                    <a href="?tab=research.patents_summary" class="nav-sub-item <?= $active_tab=='research.patents_summary'?'active':'' ?>">Patents Summary</a>
                     <a href="?tab=research.areas" class="nav-sub-item <?= $active_tab=='research.areas'?'active':'' ?>">Research Areas</a>
                     <a href="?tab=research.thesis" class="nav-sub-item <?= $active_tab=='research.thesis'?'active':'' ?>">Scholars Guided</a>
                     <a href="?tab=research.shreetech" class="nav-sub-item <?= $active_tab=='research.shreetech'?'active':'' ?>">Industrial Projects</a>
@@ -216,7 +217,6 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                     <a href="?tab=publications.conferences" class="nav-sub-item <?= $active_tab=='publications.conferences'?'active':'' ?>">Intl. Conferences</a>
                     <a href="?tab=publications.national_conferences" class="nav-sub-item <?= $active_tab=='publications.national_conferences'?'active':'' ?>">National Conferences</a>
                     <a href="?tab=publications.books" class="nav-sub-item <?= $active_tab=='publications.books'?'active':'' ?>">Books Published</a>
-                    <a href="?tab=research.patents_summary" class="nav-sub-item <?= $active_tab=='research.patents_summary'?'active':'' ?>">Patents Summary</a>
                 </div>
             </div>
 
@@ -513,6 +513,7 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                         <?php foreach($tab_data as $key => $val): ?>
                             <?php 
                             if($active_tab === 'contact' && is_array($val)) continue; 
+                            if($active_tab === 'research' && $key === 'patents_summary') continue; 
                             
                             // Check if it's a complex list that should be skipped here
                             if(is_array($val)) {
