@@ -81,6 +81,16 @@ include('header.php');
                                 <?php echo nl2br($paragraph); ?>
                             </p>
                         <?php endforeach; ?>
+                        
+                        <div class="button-group mt--30 tmp-scroll-trigger tmp-fade-in">
+                            <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank">
+                                <span class="icon-reverse-wrapper">
+                                    <span class="btn-text">Download Full CV</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
