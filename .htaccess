@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /folio/company_portfolio/
+RewriteBase /shreetech_portfolio/
 Options -MultiViews +FollowSymLinks
 DirectoryIndex index.php
 

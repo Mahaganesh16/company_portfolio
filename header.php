@@ -39,6 +39,11 @@ $about = $p_content['about'];
             background-color: <?php echo $cust['background_color'] ?? '#ffffff'; ?> !important;
         }
 
+        .tmp-banner-one-area {
+            background-image: none !important;
+            background-color: transparent !important;
+        }
+
         body, p, h1, h2, h3, h4, h5, h6, a, span, div, li, ul, button, input, textarea {
             font-family: var(--font-primary) !important;
         }
