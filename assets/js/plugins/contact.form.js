@@ -28,19 +28,16 @@
             data: formData
         })
         .done(function (response) {
-            $(formMessages).removeClass('error').addClass('success').text(response);
+            alert("Thank You! Your message has been sent successfully.");
+            $(formMessages).removeClass('error').addClass('success').text("Thank You! Your message has been sent successfully.");
 
-            // à¦‡à¦¨à¦ªà§à¦Ÿ à¦«à¦¿à¦²à§à¦¡ à¦•à§à¦²à¦¿à§Ÿà¦¾à¦° à¦•à¦°à¦¾
+            // à¦‡à¦¨à¦ªà§ à¦Ÿ à¦«à¦¿à¦²à§ à¦¡ à¦•à§ à¦²à¦¿à§Ÿà¦¾à¦° à¦•à¦°à¦¾
             $('#contact-name, #contact-email, #subject, #contact-message, #contact-phone').val('');
         })
         .fail(function (data) {
             $(formMessages).removeClass('success').addClass('error');
-
-            if (data.responseText !== '') {
-                $(formMessages).text(data.responseText);
-            } else {
-                $(formMessages).text('Oops! An error occurred and your message could not be sent.');
-            }
+            alert('Oops! An error occurred and your message could not be sent.');
+            $(formMessages).text('Oops! An error occurred and your message could not be sent.');
         });
     });
 

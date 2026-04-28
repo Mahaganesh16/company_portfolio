@@ -14,9 +14,6 @@ include('header.php');
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-head text-center">
-                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
-                            <span class="subtitle">Teaching</span>
-                        </div>
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Subjects Taught</h2>
                     </div>
                 </div>

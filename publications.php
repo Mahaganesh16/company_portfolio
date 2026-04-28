@@ -8,23 +8,33 @@ $metaDescription = $cust['meta_description'];
 $extraStyles = '
 <style>
     .edu-sub-title {
-        font-size: 14px !important;
+        font-size: 11px !important;
         color: #888 !important;
-        font-weight: 400 !important;
+        font-weight: 500 !important;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
     .edu-title {
-        font-size: 24px !important;
+        font-size: 17px !important;
         color: var(--color-secondary) !important;
         line-height: 1.4 !important;
-        margin: 15px 0 !important;
+        margin: 10px 0 !important;
+        font-weight: 700 !important;
     }
     .edu-para {
-        font-size: 18px !important;
-        color: #444 !important;
-        font-weight: 500 !important;
-        line-height: 1.5 !important;
+        font-size: 13px !important;
+        color: #666 !important;
+        font-weight: 400 !important;
+        line-height: 1.6 !important;
+    }
+    .education-experience-card {
+        padding: 20px !important;
+    }
+    .counter-card .counter-title {
+        font-size: 30px !important;
+    }
+    .counter-card .counter-para {
+        font-size: 12px !important;
     }
 
     /* Media Queries for Publications */
@@ -62,9 +72,6 @@ include('header.php');
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-head text-center">
-                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
-                            <span class="subtitle">PUBLICATIONS</span>
-                        </div>
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Publications</h2>
                     </div>
                 </div>

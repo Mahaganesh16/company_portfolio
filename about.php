@@ -74,9 +74,6 @@ include('header.php');
                 <div class="col-lg-7">
                     <div class="about-me-content ml--30 ml_md--0 ml_sm--0 mt_md--40 mt_sm--40">
                         <div class="section-head text-align-left">
-                            <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
-                                <span class="subtitle">ABOUT ME</span>
-                            </div>
                             <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in"><?php echo $about['title'] ?? 'Who I Am'; ?></h2>
                         </div>
                         <?php foreach($about['bio'] as $paragraph): ?>
@@ -84,6 +81,16 @@ include('header.php');
                                 <?php echo nl2br($paragraph); ?>
                             </p>
                         <?php endforeach; ?>
+                        
+                        <div class="button-group mt--30 tmp-scroll-trigger tmp-fade-in">
+                            <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank">
+                                <span class="icon-reverse-wrapper">
+                                    <span class="btn-text">Download Full CV</span>
+                                    <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                                    <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

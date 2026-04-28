@@ -97,22 +97,22 @@ include('header.php');
                 <div class="col-lg-12">
                     <div class="contact-form-wrapper bg-blur-style-one p--40 radius-10 tmp-scroll-trigger tmp-fade-in">
                         <h3 class="title mb--30 text-center">Send a Message</h3>
-                        <form class="tmp-contact-form" action="#" method="POST">
+                        <form class="tmp-contact-form" id="contact-form" action="mailer" method="POST">
                             <div class="row g-4">
                                 <div class="col-lg-6">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" id="contact-name" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="email" name="email" placeholder="Email Address" required>
+                                    <input type="email" name="email" id="contact-email" placeholder="Email Address" required>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                                    <input type="tel" name="phone" id="contact-phone" placeholder="Phone Number (Optional)">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" name="subject" placeholder="Subject" required>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                                    <textarea name="message" id="contact-message" rows="5" placeholder="Your Message" required></textarea>
                                 </div>
                                 <div class="col-lg-12 text-center">
                                     <button class="tmp-btn hover-icon-reverse radius-round w-100" type="submit">
@@ -123,6 +123,7 @@ include('header.php');
                                         </span>
                                     </button>
                                 </div>
+                                <div id="form-messages" class="mt-3 text-center"></div>
                             </div>
                         </form>
                     </div>

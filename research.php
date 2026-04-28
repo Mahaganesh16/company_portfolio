@@ -13,12 +13,12 @@ include('header.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-head text-align-left">
-                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
+                    <div class="section-head text-center">
+                        <div class="section-sub-title">
                             <span class="subtitle">RESEARCH</span>
                         </div>
-                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Research & Innovation</h2>
-                        <p class="description mt--30 tmp-scroll-trigger tmp-fade-in">
+                        <h2 class="title split-collab">Research & Innovation</h2>
+                        <p class="description mt--30">
                             <?php echo nl2br($research['intro']); ?>
                         </p>
                     </div>

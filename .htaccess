@@ -13,5 +13,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-# 3. Prevent Directory Listing
+# 3. Prevent Directory Listing (Commented out to avoid 403)
 # Options -Indexes
