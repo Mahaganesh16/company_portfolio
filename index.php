@@ -35,19 +35,12 @@ include('header.php');
                                 </span>
                             </h4>
                             <p class="disc tmp-scroll-trigger tmp-fade-in animation-order-3"><?php echo ($hero['degrees'] ?? '') . '<br>' . nl2br(trim($hero['description'])); ?></p>
-                            <div class="button-area-banner-one tmp-scroll-trigger tmp-fade-in animation-order-4" style="display: flex; gap: 20px; flex-wrap: wrap;">
-                                <a class="tmp-btn hover-icon-reverse radius-round" href="about">
+                            <div class="button-area-banner-one tmp-scroll-trigger tmp-fade-in animation-order-4">
+                                <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
                                     <span class="icon-reverse-wrapper">
-                                        <span class="btn-text">View Portfolio</span>
-                                    <span class="btn-icon"><i class=" fa-solid fa-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class=" fa-solid fa-arrow-right"></i></span>
-                                    </span>
-                                </a>
-                                <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank" style="background: transparent; border: 2px solid var(--color-primary); color: var(--color-primary);">
-                                    <span class="icon-reverse-wrapper">
-                                        <span class="btn-text" style="color: var(--color-primary);">Download CV</span>
-                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: var(--color-primary);"></i></span>
-                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: var(--color-primary);"></i></span>
+                                        <span class="btn-text" style="color: #fff;">Download CV</span>
+                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
+                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
                                     </span>
                                 </a>
                             </div>
