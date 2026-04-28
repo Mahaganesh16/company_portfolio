@@ -21,7 +21,6 @@ include('header.php');
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="inner">
-                            <span class="sub-title tmp-scroll-trigger tmp-fade-in animation-order-1"><?php echo $hero['sub_title']; ?></span>
                             <h4 class="title tmp-scroll-trigger tmp-fade-in animation-order-2 mt--5" style="font-size: 38px; line-height: 1.2;"><?php echo $hero['title_prefix']; ?>
                                <?php echo $hero['name']; ?> <br>
                                 <span class="header-caption">

@@ -14,9 +14,6 @@ include('header.php');
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-head text-center">
-                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
-                            <span class="subtitle">RESEARCH</span>
-                        </div>
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Research & Innovation</h2>
                         <p class="description mt--30 tmp-scroll-trigger tmp-fade-in">
                             <?php echo nl2br($research['intro']); ?>
