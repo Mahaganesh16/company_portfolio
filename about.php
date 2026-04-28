@@ -54,8 +54,9 @@ $extraStyles = '
             margin-bottom: 5px;
         }
         .qualification-desc {
-            font-size: 0.95rem;
+            font-size: 1.35rem !important;
             color: #666;
+            font-weight: 500;
         }
     </style>';
 include('header.php');
