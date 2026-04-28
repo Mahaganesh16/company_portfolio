@@ -9,11 +9,11 @@ include('header.php');
 ?>
 
     <!-- Research Intro Section Start -->
-    <section class="research-intro-area tmp-section-gap" id="intro">
+    <section class="research-intro-area tmp-section-gapTop" id="intro">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-head text-center">
+                    <div class="section-head text-align-left">
                         <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
                             <span class="subtitle">RESEARCH</span>
                         </div>

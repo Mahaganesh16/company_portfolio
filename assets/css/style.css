@@ -11619,10 +11619,7 @@ header.header-full-width.header--sticky.sticky {
   right: 0;
   font-size: 15px;
 }
-.tmp-popup-mobile-menu .tmp-mainmenu li a.open i::before {
-  content: "\f106";
-  font-weight: 400;
-}
+/* Removed buggy i::before content override, now handled natively via main.js FontAwesome classes */
 .tmp-popup-mobile-menu .tmp-mainmenu li + li {
   border-top: 1px solid var(--color-border);
 }

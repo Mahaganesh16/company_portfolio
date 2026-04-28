@@ -9,15 +9,15 @@ include('header.php');
 ?>
 
     <!-- Contact Area Start -->
-    <section class="contact-area tmp-section-gap" id="contact">
+    <section class="contact-area tmp-section-gap" id="contact" style="padding-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-head text-center">
-                        <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
+                    <div class="section-head text-center" style="margin-top: 80px;">
+                        <div class="section-sub-title">
                             <span class="subtitle">CONTACT ME</span>
                         </div>
-                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Get In Touch</h2>
+                        <h2 class="title split-collab">Get In Touch</h2>
                     </div>
                 </div>
             </div>

@@ -1,582 +1,209 @@
 {
     "hero": {
-        "sub_title": "HELLO",
-        "title_prefix": "I'm",
-        "name": "Dr. V. Subburaj",
+        "sub_title": "Add Subtitle Here",
+        "title_prefix": "Add Prefix",
+        "name": "Add Your Name",
         "designations": [
-            "University Professor.",
-            "Researcher."
+            "Add Designation 1",
+            "Add Designation 2"
         ],
-        "degrees": "MCA., M.Phil., M.E., Ph.D",
-        "description": "Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech, collaborating with international clients from USA, France, Germany, Singapore, Malaysia and New Zealand.",
-        "image": "assets\/images\/logo\/image.png"
+        "degrees": "Add Degrees Here",
+        "description": "Add a short description of yourself here.",
+        "image": "https://placehold.co/600x750/f1f5f9/64748b?text=Add+Portrait+Image"
     },
     "customization": {
-        "site_title": "Dr. V. Subburaj | Professor & Researcher - Personal Portfolio",
-        "meta_description": "Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with expertise in Digital Image Processing, IoT Security, and R&D Innovation.",
+        "site_title": "Add Site Title Here",
+        "meta_description": "Add Meta Description for SEO",
         "primary_color": "#ff0000",
-        "background_color": "#ffffff",
+        "background_color": "#f8fafc",
         "font_family": "'Inter', sans-serif",
-        "logo_text": "Dr. V. Subburaj",
-        "sidebar_image": "assets\/images\/logo\/image.png",
-        "sidebar_title": "University Professor., Researcher.",
-        "sidebar_description": "MCA., M.Phil., M.E., Ph.D Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech.",
-        "sidebar_phone": "+91 98439-78546",
-        "sidebar_email": "drsubburajv@gmail.com",
-        "sidebar_address": "50 F, Krishna Street, SRV Nagar, Thirunagar Post, Madurai TN 625005"
+        "logo_text": "Add Your Name",
+        "sidebar_image": "https://placehold.co/400x400/f1f5f9/64748b?text=Portrait",
+        "sidebar_title": "Add Sidebar Title",
+        "sidebar_description": "Add Sidebar Description",
+        "sidebar_phone": "+00 00000-00000",
+        "sidebar_email": "example@email.com",
+        "sidebar_address": "Add Your Address Here"
     },
     "about": {
-        "title": "Who I Am",
-        "image": "assets\/images\/logo\/image.png",
-        "bio": [
-            "I am a Professor, Researcher, Entrepreneur, and Innovator based in Madurai, Tamil Nadu, India. I hold a Ph.D in Digital Image Processing from Manonmanium Sundaranar University, Tirunelveli (2016), along with M.E. (CSE), M.Phil (Computer), MCA with Distinction, and B.Sc Computer Science \u2014 all from reputed universities in Tamil Nadu.",
-            "I am the Founder of ISRD (Integrated Society for Research and Development) and CEO of Shreetech, a 7-year-old R&D firm in Madurai. I have published 12 international journal papers, filed 50+ patents, authored 4 books, and have direct international clients from USA, France, Germany, Singapore, Malaysia and New Zealand.I am a Professor, Researcher, Entrepreneur, and Innovator based in Madurai, Tamil Nadu, India. I hold a Ph.D in Digital Image Processing from Manonmanium Sundaranar University, Tirunelveli (2016), along with M.E. (CSE), M.Phil (Computer), MCA with Distinction, and B.Sc Computer Science \u2014 all from reputed universities in Tamil Nadu.I am the Founder of ISRD (Integrated Society for Research and Development) and CEO of Shreetech, a 7-year-old R&D firm in Madurai. I have published 12 international journal papers, filed 50+ patents, authored 4 books, and have direct international clients from USA, France, Germany, Singapore, Malaysia and New Zealand."
-        ],
+        "title": "Add About Section Title",
+        "image": "https://placehold.co/600x750/f1f5f9/64748b?text=Add+Your+Portrait+Image",
+        "bio": {
+            "0": "Add your first biography paragraph here.",
+            "1": "Add your second biography paragraph here."
+        },
         "details": [
             {
                 "key": "Full Name",
-                "value": "Dr. V. Subburaj"
-            },
-            {
-                "key": "Date of Birth",
-                "value": "16th March 1979"
-            },
-            {
-                "key": "Father's Name",
-                "value": "Mr. S. Varatharajaperumal"
-            },
-            {
-                "key": "Marital Status",
-                "value": "Married"
-            },
-            {
-                "key": "Nationality",
-                "value": "Indian"
-            },
-            {
-                "key": "Languages",
-                "value": "English, Tamil, Hindi, Telugu"
+                "value": "Add Name"
             },
             {
                 "key": "Email",
-                "value": "drsubburajv@gmail.com"
-            },
-            {
-                "key": "Phone",
-                "value": "98439-78546  \/  82486-22526"
-            },
-            {
-                "key": "Address",
-                "value": "50 F, Krishna Street, SRV Nagar, Thirunagar Post, Madurai TN 625005"
-            },
-            {
-                "key": "Current Position",
-                "value": "Professor, Vemu Institute of Technology, Chitoor, Andhra Pradesh"
-            },
-            {
-                "key": "R&D Firm",
-                "value": "CEO \u2013 Shreetech, Madurai"
-            },
-            {
-                "key": "Research Society",
-                "value": "Founder \u2013 ISRD, Madurai"
+                "value": "Add Email"
             }
         ],
         "education": [
             {
-                "year": "2016 \u2014 Ph.D",
-                "title": "Digital Image Processing",
-                "desc": "Manonmanium Sundaranar University, Tirunelveli"
-            },
-            {
-                "year": "2010 \u2014 M.E. (CSE)",
-                "title": "Computer Science & Engineering",
-                "desc": "Mohammed Sathak Engineering College, Ramnad"
-            },
-            {
-                "year": "2006 \u2014 M.Phil (Computer)",
-                "title": "Master of Philosophy in Computer Science",
-                "desc": "Madurai Kamaraj University"
-            },
-            {
-                "year": "2004 \u2014 MCA (Distinction)",
-                "title": "Master of Computer Application",
-                "desc": "Madurai Kamaraj University"
-            },
-            {
-                "year": "2001 \u2014 B.Sc (Computer Science)",
-                "title": "Bachelor of Computer Science",
-                "desc": "Madurai Kamaraj University"
+                "year": "Add Year",
+                "title": "Add Degree Title",
+                "desc": "Add Institution Name"
             }
         ]
     },
     "research": {
-        "intro": "My research spans Digital Image Processing, MANET (Mobile Ad-hoc Networks), Cryptography, Network Security, Data Mining, and IoT. I completed my M.Phil research on 'Spatial Database for Web Application' and my Ph.D in Digital Image Processing at Manonmanium Sundaranar University (2016). Through Shreetech and ISRD, I have filed 50+ patents and continue to lead cutting-edge R&D projects.\r\n\r\n",
+        "intro": "Add a summary of your research activities here.",
         "areas": [
             {
-                "title": "MANET",
-                "desc": "Mobile Ad-hoc Networks",
-                "icon": "fa-solid fa-network-wired"
-            },
-            {
-                "title": "Data Mining",
-                "desc": "Spatial Database",
-                "icon": "fa-solid fa-database"
-            },
-            {
-                "title": "Neural Networks",
-                "desc": "Artificial Neural Networks",
-                "icon": "fa-solid fa-brain"
-            },
-            {
-                "title": "Image Processing",
-                "desc": "Image Processing with MATLAB",
-                "icon": "fa-solid fa-image"
-            },
-            {
-                "title": "Cryptography",
-                "desc": "Cryptography & Steganography",
-                "icon": "fa-solid fa-user-secret"
-            },
-            {
-                "title": "Network Security",
-                "desc": "Network Security & IoT",
-                "icon": "fa-solid fa-shield-halved"
+                "title": "Add Research Area",
+                "desc": "Add Area Description",
+                "icon": "fa-solid fa-flask"
             }
         ],
         "thesis": [
             {
-                "type": "Ph.D Research",
-                "title": "Digital Image Processing",
-                "uni": "Manonmanium Sundaranar University, Tirunelveli",
-                "year": "2016"
-            },
-            {
-                "type": "M.Phil Research",
-                "title": "Spatial Database for Web Application",
-                "uni": "Madurai Kamaraj University (2006)",
-                "guide": "Dr. D. Christopher Durairaj, SG Lecturer in Computer Science, VHNSN College \u2013 Virudhunagar"
+                "type": "Add Thesis Type",
+                "title": "Add Thesis Title",
+                "uni": "Add University Name",
+                "year": "Add Year"
             }
         ],
         "patents_summary": {
-            "national_count": "35",
-            "national_label": "National Patents (Filed & Granted)",
-            "intl_count": "15",
-            "intl_label": "International Patents (Filed & Granted)",
-            "total_count": "50",
+            "national_count": "0",
+            "national_label": "National Patents",
+            "intl_count": "0",
+            "intl_label": "International Patents",
+            "total_count": "0",
             "total_label": "Total Patents",
-            "utility_design_count": "20+",
-            "utility_design_label": "International and Indian Utility & Design Patents"
+            "utility_design_count": "0",
+            "utility_design_label": "Utility Patents"
         },
         "projects": {
-            "title": "Industrial Projects",
-            "founder": "ISRD (Integrated Society for Research and Development)",
-            "ceo": "Shreetech, a 7-year-old R&D Firm based in Madurai",
-            "desc": "Shreetech deals with research projects from UGC in joint collaboration with universities and Government R&D Sectors. It is a pioneer in WordPress and Secure Mobile App development using AI, Deep Learning, ML and Data Science.",
-            "clients": "USA | France | Germany | Singapore | Malaysia | New Zealand",
-            "projects": "20+ projects ongoing in EDP, MSME, EDI channels through institute-industry programs."
+            "title": "Add Projects Title",
+            "founder": "Add Founder Info",
+            "ceo": "Add CEO Info",
+            "desc": "Add Projects Description",
+            "clients": "Add Client Locations",
+            "projects": "Add Number of Projects"
         }
     },
     "publications": {
         "journals": [
             {
                 "id": "[J1]",
-                "source": "IOSPRESS, United States (2017)",
-                "title": "An Efficient Pattern Matching Algorithm For Detecting SQL Injection Attack Using Shift-Bi-Direction (Sbd) Searching Approach",
-                "authors": "Dr.M. Amutha Prabakar, C. Jayaprakash, Dr. Subburaj SV"
-            },
-            {
-                "id": "[J2]",
-                "source": "Indian Journal of Science and Technology (2014)",
-                "title": "Multi hop secure adhoc network to eradicate cooperative diversity",
-                "authors": "Subburaj, V., and K. Chitra \u2014 7.2 (2014): 135-141."
-            },
-            {
-                "id": "[J3]",
-                "source": "i-Manager's Journal on Communication (2014)",
-                "title": "Secure Topology updates using PSO in MANET for Reducing Mobility Delay for Tactical Networks using TORA",
-                "authors": "Subburaj, V., K. Chitra, and S. Venkateswaran \u2014 3.2 (2014): 27."
-            },
-            {
-                "id": "[J4]",
-                "source": "IEEE WORLD CONGRESS (2014)",
-                "title": "Secure Localized node positioning in Mobile ad-hoc networks using PSO",
-                "authors": "Subburaj, V., and K. Chitra \u2014 WCCCT, 2014."
-            },
-            {
-                "id": "[J5]",
-                "source": "TIJCSA (2013)",
-                "title": "Efficient Mobile node Hand-Over Mechanism using AOL by setting RWPB",
-                "authors": "Chitra, K. \u2014 Vol. 1.11 (2013)."
-            },
-            {
-                "id": "[J6]",
-                "source": "INTERNATIONAL JOURNAL OF COMPUTER APPLICATIONS (2012)",
-                "title": "Mobile node dynamism using particle swarm optimization to fight against vulnerability exploitations",
-                "authors": "Subburaj, V., and K. Chitra \u2014 Vol. 41.13 (2012)."
-            },
-            {
-                "id": "[J7]",
-                "source": "WIRELESS COMMUNICATION AND MOBILE COMPUTING (HINDAWI-SCI)",
-                "title": "Multicast routing protocol for internet of Things for ensuring trust based key management using PSO",
-                "authors": "Dr V J Chakravarthy, Dr Subburaj V, Ramesh R, M Seenivasan \u2014 Accepted for Publication"
-            },
-            {
-                "id": "[J8]",
-                "source": "WIRELESS COMMUNICATION AND MOBILE COMPUTING (HINDAWI-SCI)",
-                "title": "A Novel Method For Reveiling Person Identity With Single Tooth As Evidence Using Sift And Knn Features",
-                "authors": "Dr. S. Madhusudhanan, Vijay Vasanth Aroulanandam, Dr. P Chandra Sekhar Reddy, Dr. S. Sathya, Dr Subburaj V \u2014 Accepted for Publication"
-            },
-            {
-                "id": "[J9]",
-                "source": "TECH SCIENCE (SCI)",
-                "title": "Tracking web mining path traversal using frequent pattern mining for accessing user hit factor",
-                "authors": "Dr G M Karthik, Dr D Dhanya, Dr Subburaj V, Dr Sujiprasad \u2014 Accepted for Publication"
+                "source": "Add Journal Source & Year",
+                "title": "Add Journal Paper Title",
+                "authors": "Add Authors"
             }
         ],
         "conferences": [
             {
                 "id": "[IC1]",
-                "source": "FISAT '08, Cochin",
-                "title": "A JAVA framework for Optimal ECC-Based Threshold Signcryption",
-                "details": "Vol. II, 2008, pp. 562-565."
-            },
-            {
-                "id": "[IC2]",
-                "source": "ICACT '08, Hyderabad",
-                "title": "An Asymmetric Image Encryption and Decryption based on Jumbled Parallel Computing (IEJPC)",
-                "details": "Dec 26th\u201327th 2008, pp. 613-617."
-            },
-            {
-                "id": "[IC3]",
-                "source": "PSG COLLEGE OF TECHNOLOGY, COIMBATORE",
-                "title": "Color Space Transformation using Cryptography and Steganography",
-                "details": "Dated 27th\u201329th December 2009."
+                "source": "Add Conference Name & Location",
+                "title": "Add Conference Paper Title",
+                "details": "Add Publication Details"
             }
         ],
         "national_conferences": [
             {
                 "id": "[NC1]",
-                "source": "NCACA'09, COIMBATORE",
-                "title": "A Java Framework Cryptanalysis using GA (JFCGA)",
-                "details": "Feb 7th\u20138th 2009, PSG College of Technology."
-            },
-            {
-                "id": "[NC2]",
-                "source": "RCCIT'09",
-                "title": "Color Space Cryptography",
-                "details": "20th March 2009."
-            },
-            {
-                "id": "[NC3]",
-                "source": "PES INSTITUTE OF TECHNOLOGY",
-                "title": "A Novel Method to Analyze Steganographic Content Using Dictionary Attack",
-                "details": "22-23 Oct 2009."
-            },
-            {
-                "id": "[NC4]",
-                "source": "DR. SIVANTHI ADITANAR COLLEGE",
-                "title": "CBSR Clustering Algorithm to Adapt Mobile Nodes in MANETs",
-                "details": "22-23 Oct 2009."
-            },
-            {
-                "id": "[NC5]",
-                "source": "NEHRU ARTS AND SCIENCE COLLEGE",
-                "title": "Ensuring Security on Ownership using Visual Cryptography",
-                "details": "5-6 Feb 2010."
-            },
-            {
-                "id": "[NC6]",
-                "source": "MOHAMED SATHAK ENGINEERING COLLEGE",
-                "title": "Gray Channel Coding Scheme for Color Image in Steganography",
-                "details": "30-31 Mar 2010."
+                "source": "Add National Conference Name",
+                "title": "Add Paper Title",
+                "details": "Add Details"
             }
         ],
         "books": [
             {
                 "id": "[B1]",
-                "source": "Pandit Publication",
-                "title": "R Programming \u2013 Simple Way to Learn Machine Learning"
-            },
-            {
-                "id": "[B2]",
-                "source": "Pandit Publication",
-                "title": "Data Science using R Programming"
-            },
-            {
-                "id": "[B3]",
-                "source": "Sankalp Publications",
-                "title": "HEALTH CRYPTO \u2013 A Secure Transaction Using Block Chain"
-            },
-            {
-                "id": "[B4]",
-                "source": "RECENT INNOVATIONS (RIEM 2021)",
-                "title": "An Optimized Shared Tree Secure Trust Multicast Routing Protocol for Internet of Things"
+                "source": "Add Publisher Name",
+                "title": "Add Book Title"
             }
         ]
     },
     "experience": {
         "journey": [
             {
-                "period": "Jan 2023 \u2014 Present",
-                "role": "Professor",
-                "location": "Vemu Institute of Technology, Chitoor, Andhra Pradesh",
-                "desc": "Teaching PG and UG students, conducting research, guiding student projects."
-            },
-            {
-                "period": "2016 \u2014 Oct 2022",
-                "role": "Director, Dept. of MCA",
-                "location": "VVV College, Virudhunagar",
-                "desc": "Led the MCA department, administered faculty, supervised curriculum and academics."
-            },
-            {
-                "period": "June 2008 \u2014 June 2015",
-                "role": "Assistant Professor & Placement Coordinator (MCA)",
-                "location": "Thiagarajar School of Management (TSM), Madurai",
-                "desc": "Teaching, placement coordination, student mentoring and academic activities."
-            },
-            {
-                "period": "May 2006 \u2014 April 2008",
-                "role": "Lecturer",
-                "location": "Department of Computer Application, VHNSN College, Virudhunagar",
-                "desc": "Conducted lectures in Computer Applications and related subjects."
-            },
-            {
-                "period": "Nov 2004 \u2014 May 2006",
-                "role": "Web Designer & Programmer",
-                "location": "Global Soft Technologies, Madurai",
-                "desc": "Designed and developed websites and software applications for clients."
+                "period": "Add Period",
+                "role": "Add Job Role",
+                "location": "Add Company/University Name",
+                "desc": "Add Job Responsibilities"
             }
         ],
         "examinership": [
             {
-                "uni": "Madurai Kamaraj University",
-                "location": "Madurai (PG and UG)",
+                "uni": "Add University Name",
+                "location": "Add Location",
                 "icon": "fa-solid fa-graduation-cap"
-            },
-            {
-                "uni": "SFR College",
-                "location": "Sivakasi (UG and PG)",
-                "icon": "fa-solid fa-file-signature"
-            },
-            {
-                "uni": "ANJAC College",
-                "location": "Sivakasi (UG and PG)",
-                "icon": "fa-solid fa-clipboard-check"
-            },
-            {
-                "uni": "LDC College",
-                "location": "Madurai (UG and PG)",
-                "icon": "fa-solid fa-building-columns"
             }
         ]
     },
     "teaching": {
         "subjects": [
             {
-                "title": "Digital Image Processing",
-                "desc": "Advanced techniques in image enhancement, restoration, and analysis."
-            },
-            {
-                "title": "Network Security",
-                "desc": "Cryptography, secure communication protocols, and defensive mechanisms."
-            },
-            {
-                "title": "Data Mining",
-                "desc": "Spatial databases, pattern recognition, and big data analysis."
+                "title": "Add Subject Name",
+                "desc": "Add Subject Description"
             }
         ],
         "certifications": [
             {
-                "title": "IBM Mainframe",
-                "desc": "Certified at Maples Ltd, Chennai",
-                "icon": "fa-solid fa-server"
-            },
-            {
-                "title": "Microsoft Certified Professional",
-                "desc": "HTML5, CSS3, JavaScript for Mobile Development",
-                "icon": "fa-brands fa-microsoft"
-            },
-            {
-                "title": "Certified Drone Engineer",
-                "desc": "Unmanned Aerial Systems Specialist",
-                "icon": "fa-solid fa-helicopter"
-            },
-            {
-                "title": "Certified IOT Security Analyst",
-                "desc": "Internet of Things Security Expert",
-                "icon": "fa-solid fa-microchip"
+                "title": "Add Certification Name",
+                "desc": "Add Issuing Authority",
+                "icon": "fa-solid fa-certificate"
             }
         ],
         "courses": [
             {
-                "title": "MCA (Master of Computer Applications)",
-                "desc": "Handling core technical subjects, practical labs, and final year projects."
-            },
-            {
-                "title": "BE\/B.Tech Computer Science",
-                "desc": "Teaching undergraduate engineering students and guiding R&D initiatives."
+                "title": "Add Course Name",
+                "desc": "Add Course Level/Description"
             }
         ],
         "mentoring": [
-            "Guiding Ph.D. scholars in Digital Image Processing and Mobile Ad-hoc Networks.",
-            "Supervising M.Phil. and PG student projects in Spatial Database and IoT.",
-            "Career counseling and placement mentoring for MCA students."
+            "Add Mentoring Point 1",
+            "Add Mentoring Point 2"
         ],
         "workshops_organized": [
             {
-                "date": "27th Feb 2010",
-                "title": "NCRTSC'10",
-                "location": "Convenor: National Conference on 'Recent Trends in Soft Computing'"
-            },
-            {
-                "date": "20.8.2010",
-                "title": "WAMP Workshop",
-                "location": "Resource Person: Organized 'WAMP' workshop for students at TSM Madurai."
-            },
-            {
-                "date": "Sept 2010",
-                "title": "Web & Photoshop",
-                "location": "Organized Two Day Workshop on 'Web Designing and Photoshop' at TSM Madurai."
+                "date": "Add Date",
+                "title": "Add Workshop Title",
+                "location": "Add Workshop Location"
             }
         ],
         "workshops_attended": [
-            "One Day Workshop on 'Research Orientation for Science Lecturers' \u2013 Research Committee, VHNSN College, Virudhunagar.",
-            "UGC Sponsored Two Day State Level Workshop on 'Recent Trends in Feed Forward Neural Networks \u2013 Backpropagation Algorithms' \u2013 Dept. of Computer Science, VHNSN College, Virudhunagar.",
-            "TNSCST Sponsored Two Day State Level Seminar on 'Recent Advances of Computing in Computer Science' \u2013 Dept. of Computer Science, VHNSN College, Virudhunagar.",
-            "FDP on 'Computer Security Principles and Practices' \u2013 Dept. of Computer Application, TSM, 8th\u20139th August 2008."
+            "Add Workshop/Seminar Name 1",
+            "Add Workshop/Seminar Name 2"
         ]
     },
     "skills": [
         {
-            "category": "Research Tools",
-            "items": "Matlab | CloudSim | LaTeX\nOPNET | Network Simulator\nWEKA | R-Language | IoT Tools",
-            "icon": "fa-solid fa-microscope"
-        },
-        {
-            "category": "Programming Languages",
-            "items": "C | C++ | Java | J2ME",
+            "category": "Add Skill Category",
+            "items": "Skill 1 | Skill 2 | Skill 3",
             "icon": "fa-solid fa-code"
-        },
-        {
-            "category": "Web Technologies",
-            "items": "HTML5 | CSS3 | JavaScript\nPHP | ASP.Net | jQuery | JSON\nCodeIgniter | WordPress",
-            "icon": "fa-solid fa-globe"
-        },
-        {
-            "category": "Artificial Intelligence",
-            "items": "Machine Learning | Neural Networks\nDeep Learning | Computer Vision\nNLP | Predictive Modeling",
-            "icon": "fa-solid fa-brain"
-        },
-        {
-            "category": "Image Processing",
-            "items": "Digital Image Processing\nSpatial Filtering | Feature Extraction\nMorphological Operations",
-            "icon": "fa-solid fa-clapperboard"
-        },
-        {
-            "category": "Database Management",
-            "items": "MySQL | PostgreSQL | MongoDB\nOracle | SQLite | Database Design",
-            "icon": "fa-solid fa-database"
-        },
-        {
-            "category": "Testing Tools & IDE",
-            "items": "LoadRunner | Selenium | QTP\nDreamViewer",
-            "icon": "fa-solid fa-vial-circle-check"
-        },
-        {
-            "category": "Professional Certifications",
-            "items": "IBM Mainframe\nMicrosoft Certified Professional\nCertified Drone Engineer\nIOT Security Analyst",
-            "icon": "fa-solid fa-award"
         }
     ],
     "contact": {
-        "email": "drsubburajv@gmail.com",
+        "email": "example@email.com",
         "phones": [
-            "+91 98439-78546",
-            "+91 82486-22526"
+            "+00 00000-00000"
         ],
         "offices": [
             {
-                "name": "Vemu IT",
-                "location": "Chitoor, AP"
-            },
-            {
-                "name": "Shreetech",
-                "location": "Madurai, TN"
+                "name": "Add Office Name",
+                "location": "Add Location"
             }
         ],
-        "mailing_address": "50 F, Krishna Street, SRV Nagar, Thirunagar Post, Madurai, Tamil Nadu, India - 625005",
+        "mailing_address": "Add Your Full Mailing Address Here",
         "social": [
-            {
-                "platform": "Instagram",
-                "link": "#",
-                "icon": "fa-brands fa-instagram"
-            },
             {
                 "platform": "Linkedin",
                 "link": "#",
                 "icon": "fa-brands fa-linkedin-in"
-            },
-            {
-                "platform": "Google Scholar",
-                "link": "#",
-                "icon": "fa-solid fa-graduation-cap"
-            },
-            {
-                "platform": "ResearchGate",
-                "link": "#",
-                "icon": "fa-brands fa-researchgate"
-            },
-            {
-                "platform": "Twitter",
-                "link": "#",
-                "icon": "fa-brands fa-twitter"
-            },
-            {
-                "platform": "Facebook",
-                "link": "#",
-                "icon": "fa-brands fa-facebook-f"
             }
         ]
     },
     "talks": [
         {
-            "location": "Feb 2012 \u2014 KLN College of IT, Madurai",
-            "title": "Two Day FDP on Research Simulation",
-            "desc": "Resource Person for 'Research Based Simulation in Image Processing and Computing' \u2014 9th & 10th February 2012."
-        },
-        {
-            "location": "SFR College, Sivakasi",
-            "title": "Workshop on WAMP",
-            "desc": "Resource Person for a One Day Workshop on 'WAMP' for students and faculty."
-        },
-        {
-            "location": "SACS Engg College, Madurai",
-            "title": "Chief Guest \u2013 Open Source Software",
-            "desc": "Chief Guest for the Inaugural Function on 'Open Source Software'."
-        },
-        {
-            "location": "SFR College, Sivakasi",
-            "title": "Two Day Workshop on WAMP",
-            "desc": "Resource Person for the Second session of the WAMP workshop series."
-        },
-        {
-            "location": "Sourastra College, Madurai",
-            "title": "Three Day Workshop on DotNet",
-            "desc": "Resource Person for 'DotNet Technologies' workshop covering advanced framework concepts."
-        },
-        {
-            "location": "Sept 2010 \u2014 TSM, Madurai",
-            "title": "Web Designing and Photoshop",
-            "desc": "Resource Person for a Two Day Workshop (23 & 24 Sept 2010) at Thiagarajar School of Management."
+            "location": "Add Talk Location & Date",
+            "title": "Add Talk Title",
+            "desc": "Add Summary of the Talk"
         }
-    ],
-    "research.projects": {
-        "title": "Industrial Projects",
-        "founder": "ISRD (Integrated Society for Research and Development)",
-        "ceo": "Shreetech, a 7-year-old R&D Firm based in Madurai",
-        "desc": "Shreetech deals with research projects from UGC in joint collaboration with universities and Government R&D Sectors. It is a pioneer in WordPress and Secure Mobile App development using AI, Deep Learning, ML and Data Science.\r\n\r\nShreetech deals with research projects from UGC in joint collaboration with universities and Government R&D Sectors. It is a pioneer in WordPress and Secure Mobile App development using AI, Deep Learning, ML and Data Science.",
-        "clients": "USA | France | Germany | Singapore | Malaysia | New Zealand",
-        "projects": "20+ projects ongoing in EDP, MSME, EDI channels through institute-industry programs."
-    }
+    ]
 }

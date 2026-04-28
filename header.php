@@ -129,23 +129,213 @@ $about = $p_content['about'];
             }
         }
 
-        /* Active Page State */
-        .tmp-mainmenu li.active > a,
-        .tmp-mainmenu li.active > a i {
+        /* Active Page State with Box */
+        .tmp-mainmenu li.active > a {
+            background-color: rgba(255, 1, 79, 0.08) !important;
             color: var(--color-primary) !important;
+            padding: 10px 18px !important;
+            border-radius: 8px;
+            font-weight: 700 !important;
         }
 
         /* Red Hover Effect for Navigation */
-        .tmp-mainmenu li a:hover,
-        .tmp-mainmenu li.has-dropdown:hover > a,
-        .tmp-mainmenu li.has-dropdown:hover > a i,
-        .submenu li a:hover {
+        .tmp-mainmenu li a:hover {
             color: var(--color-primary) !important;
         }
 
-        /* Mobile Menu Red Hover */
-        ul.tmp-mainmenu li a:hover {
+        /* Hero Animation Colors (Matches Requested Second Image) */
+        .cd-words-wrapper b {
             color: var(--color-primary) !important;
+            font-weight: 800 !important;
+        }
+
+        /* Headline Animation (Clip Effect) */
+        .cd-headline.clip .cd-words-wrapper {
+            overflow: hidden;
+            vertical-align: top;
+            padding-right: 25px !important;
+        }
+        .cd-headline.clip .cd-words-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 3px;
+            height: 80%;
+            background-color: var(--color-primary);
+        }
+        .cd-words-wrapper b {
+            display: none;
+        }
+        .cd-words-wrapper b.is-visible {
+            display: inline-block;
+        }
+        
+        /* Vibrant Red Button Styling */
+        .tmp-btn.radius-round {
+            background: var(--color-primary) !important;
+            color: white !important;
+            padding: 18px 40px !important;
+            border-radius: 500px !important;
+            border: none !important;
+            font-weight: 700 !important;
+            display: inline-flex !important;
+            align-items: center;
+            gap: 10px;
+            text-transform: capitalize;
+            box-shadow: 0 10px 25px rgba(255, 1, 79, 0.3);
+            transition: all 0.3s ease;
+        }
+        .tmp-btn.radius-round:hover {
+            background: #d90043 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 1, 79, 0.4);
+            color: white !important;
+        }
+
+        /* Robust CSS Dropdown Arrows (Matches Second Image) */
+        .dropdown-toggle-btn {
+            position: relative;
+            padding-right: 30px !important;
+        }
+
+        .dropdown-toggle-btn::after {
+            content: "";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #333;
+            border-bottom: 2px solid #333;
+            transform: translateY(-70%) rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-toggle-btn.open {
+            color: var(--color-primary) !important;
+        }
+
+        .dropdown-toggle-btn.open::after {
+            border-color: var(--color-primary);
+            transform: translateY(-30%) rotate(-135deg);
+        }
+
+        /* Header & Section Spacing Fixes */
+        .tmp-header-area-start {
+            background-color: var(--color-white) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .tmp-section-gapTop { padding-top: 100px !important; }
+            .about-me-area.tmp-section-gap { padding-top: 100px !important; }
+            
+            .tmp-section-gap { padding-top: 60px !important; padding-bottom: 40px !important; }
+            .tmp-section-gapBottom { padding-bottom: 40px !important; }
+            
+            h2.title, .section-head h2 { font-size: 30px !important; }
+            h3.title { font-size: 24px !important; }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .about-me-image img {
+                max-width: 280px !important;
+                margin: 0 auto 30px !important;
+                display: block;
+            }
+            
+            .tmp-popup-mobile-menu .header-top .logo h4.title {
+                font-size: 16px !important;
+            }
+            .tmp-popup-mobile-menu .header-top .logo i {
+                font-size: 22px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .about-me-image img {
+                max-width: 220px !important;
+            }
+            
+            .tmp-popup-mobile-menu .header-top .logo h4.title {
+                display: block !important;
+                font-size: 14px !important;
+                max-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .tmp-popup-mobile-menu .header-top .logo i {
+                font-size: 18px !important;
+            }
+            
+            .tmp-section-gapTop { padding-top: 80px !important; }
+            .about-me-area.tmp-section-gap { padding-top: 80px !important; }
+            .tmp-section-gap { padding-top: 25px !important; padding-bottom: 25px !important; }
+            .tmp-section-gapBottom { padding-bottom: 25px !important; }
+
+            /* Home Hero Image Mobile Size */
+            .banner-right-content img {
+                max-width: 300px !important;
+                margin-top: 30px;
+            }
+        }
+
+        /* Publication Card Fixes */
+        .education-experience-card {
+            overflow: hidden;
+            word-wrap: break-word;
+            padding: 25px !important;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .education-experience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--color-primary);
+        }
+
+        .row.g-5 {
+            --bs-gutter-x: 2rem;
+            --bs-gutter-y: 2rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .row.g-5 {
+                --bs-gutter-x: 1rem;
+                --bs-gutter-y: 1.5rem;
+            }
+        @media only screen and (max-width: 480px) {
+            .personal-details-table td {
+                display: block !important;
+                width: 100% !important;
+                padding: 5px 0 !important;
+                border-bottom: none !important;
+            }
+            .personal-details-table td:first-child {
+                padding-top: 15px !important;
+                font-size: 14px !important;
+            }
+            .personal-details-table td:last-child {
+                padding-bottom: 10px !important;
+                border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+                color: var(--color-body);
+            }
+        }
+
+        .text-align-left {
+            text-align: left !important;
+        }
+        .text-align-left * {
+            text-align: left !important;
         }
     </style>
 </head>
@@ -159,15 +349,15 @@ $about = $p_content['about'];
                 <div class="col-lg-12">
                     <div class="header-content">
                         <div class="logo" style="display: flex; align-items: center; padding-left: 20px;">
-                            <a href="index" style="display: flex; align-items: center; gap: 12px; white-space: nowrap;">
+                            <a href="./" style="display: flex; align-items: center; gap: 12px; white-space: nowrap;">
                                 <i class="fa-solid fa-graduation-cap" style="font-size: 28px; color: var(--color-primary);"></i>
                                 <h4 class="title" style="margin: 0; font-weight: 800; font-size: 22px; color: var(--color-heading); line-height: 1;"><?php echo $cust['logo_text']; ?></h4>
                             </a>
                         </div>
-                        <nav class="tmp-mainmenu-nav d-none d-xl-block">
+                        <nav class="tmp-mainmenu-nav d-none d-lg-block">
                             <ul class="tmp-mainmenu">
                                 <li class="<?php echo ($currentPage == 'index.php') ? 'active' : ''; ?>">
-                                    <a href="index">Home</a>
+                                    <a href="./">Home</a>
                                 </li>
                                 <li class="<?php echo ($currentPage == 'about.php') ? 'active' : ''; ?>">
                                     <a href="about">About</a>
@@ -194,10 +384,10 @@ $about = $p_content['about'];
                         <div class="tmp-header-right" style="padding-right: 20px;">
 
                             <div class="actions-area">
-                                <div class="tmp-side-collups-area d-none d-xl-block">
+                                <div class="tmp-side-collups-area d-none d-lg-block">
                                     <button class="tmp-menu-bars tmp_button_active"><i class="fa-solid fa-bars-staggered"></i></button>
                                 </div>
-                                <div class="tmp-side-collups-area d-block d-xl-none">
+                                <div class="tmp-side-collups-area d-block d-lg-none">
                                     <button class="tmp-menu-bars humberger_menu_active"><i class="fa-solid fa-bars-staggered"></i></button>
                                 </div>
                             </div>
@@ -210,11 +400,11 @@ $about = $p_content['about'];
     <!-- tpm-header-area end -->
 
     <!-- Sidebar & Mobile Menu -->
-    <div class="d-none d-xl-block">
+    <div class="d-none d-lg-block">
         <div class="tmp-sidebar-area tmp_side_bar">
             <div class="inner">
                 <div class="top-area">
-                    <a href="index.php" class="logo">
+                    <a href="./" class="logo">
                         <h4 class="title" style="margin: 0; font-weight: 800; color: var(--color-primary); letter-spacing: 1px;"><?php echo $cust['logo_text']; ?></h4>
                     </a>
                     <div class="close-icon-area">
@@ -225,7 +415,7 @@ $about = $p_content['about'];
                 </div>
                 <div class="content-wrapper">
                     <div class="image-area-feature">
-                        <a href="index.php">
+                        <a href="./">
                             <img src="<?php echo $cust['sidebar_image'] ?? $hero['image']; ?>" alt="<?php echo $cust['logo_text'] ?? 'Profile'; ?>">
                         </a>
                     </div>
@@ -275,12 +465,12 @@ $about = $p_content['about'];
         <a class="overlay_close_side_menu close_side_menu_active" href="javascript:void(0);"></a>
     </div>
 
-    <div class="d-block d-xl-none">
+    <div class="d-block d-lg-none">
         <div class="tmp-popup-mobile-menu">
             <div class="inner">
                 <div class="header-top">
                     <div class="logo">
-                        <a href="index.php" style="display: flex; align-items: center; gap: 10px;">
+                        <a href="./" style="display: flex; align-items: center; gap: 10px;">
                             <i class="fa-solid fa-graduation-cap" style="font-size: 28px; color: var(--color-primary);"></i>
                             <h4 class="title" style="margin: 0; font-weight: 800; font-size: 20px; color: var(--color-heading);"><?php echo $cust['logo_text']; ?></h4>
                         </a>
@@ -292,10 +482,10 @@ $about = $p_content['about'];
                     </div>
                 </div>
                 <ul class="tmp-mainmenu">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="./">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li class="has-dropdown">
-                        <a href="javascript:void(0)">Research <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Research</a>
                         <ul class="submenu">
                             <li><a href="research.php#intro">Introduction</a></li>
                             <li><a href="research.php#areas">Research Areas</a></li>
@@ -305,7 +495,7 @@ $about = $p_content['about'];
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="javascript:void(0)">Publications <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Publications</a>
                         <ul class="submenu">
                             <li><a href="publications.php#journals">Journals</a></li>
                             <li><a href="publications.php#intl-conferences">Intl Conferences</a></li>
@@ -315,14 +505,14 @@ $about = $p_content['about'];
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="javascript:void(0)">Experience <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Experience</a>
                         <ul class="submenu">
                             <li><a href="experience.php#journey">Professional Journey</a></li>
                             <li><a href="experience.php#examinership">Examinership</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="javascript:void(0)">Teaching <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Teaching</a>
                         <ul class="submenu">
                             <li><a href="teaching.php#subjects">Subjects</a></li>
                             <li><a href="teaching.php#courses">Courses</a></li>

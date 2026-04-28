@@ -26,6 +26,32 @@ $extraStyles = '
         font-weight: 500 !important;
         line-height: 1.5 !important;
     }
+
+    /* Media Queries for Publications */
+    @media only screen and (max-width: 768px) {
+        .edu-title {
+            font-size: 20px !important;
+        }
+        .edu-para {
+            font-size: 16px !important;
+        }
+        .section-head h3.title {
+            font-size: 22px !important;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .edu-title {
+            font-size: 18px !important;
+            margin: 10px 0 !important;
+        }
+        .edu-para {
+            font-size: 14px !important;
+        }
+        .section-head h3.title {
+            font-size: 18px !important;
+        }
+    }
 </style>';
 include('header.php');
 ?>

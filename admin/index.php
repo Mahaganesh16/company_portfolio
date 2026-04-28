@@ -270,7 +270,40 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
 
     <div class="main">
         <div class="top-bar">
-            <h5 class="m-0">Dashboard / <?= ucfirst(str_replace('.', ' / ', $active_tab)) ?></h5>
+            <?php
+            $friendly_names = [
+                'research.thesis' => 'Scholars Guided',
+                'about.details' => 'Personal Details',
+                'about.education' => 'Education',
+                'research.patents_summary' => 'Patents Summary',
+                'research.areas' => 'Research Areas',
+                'research.projects' => 'Industrial Projects',
+                'publications.journals' => 'Journals',
+                'publications.conferences' => 'International Conferences',
+                'publications.national_conferences' => 'National Conferences',
+                'publications.books' => 'Books Published',
+                'experience.journey' => 'Work Experience',
+                'experience.examinership' => 'Examinership',
+                'teaching.subjects' => 'Subjects Taught',
+                'teaching.courses' => 'Courses Handled',
+                'teaching.mentoring' => 'Academic Mentoring',
+                'teaching.certifications' => 'Professional Certifications',
+                'teaching.workshops_organized' => 'Workshops Organized',
+                'teaching.workshops_attended' => 'Workshops Attended',
+            ];
+            
+            $parts = explode('.', $active_tab);
+            $formatted_parts = array_map(function($p) { return ucfirst(str_replace('_', ' ', $p)); }, $parts);
+            
+            if (isset($friendly_names[$active_tab])) {
+                $breadcrumb = ucfirst($parts[0]) . ' / ' . $friendly_names[$active_tab];
+                $list_title = $friendly_names[$active_tab];
+            } else {
+                $breadcrumb = implode(' / ', $formatted_parts);
+                $list_title = end($formatted_parts);
+            }
+            ?>
+            <h5 class="m-0">Dashboard / <?= $breadcrumb ?></h5>
             <a href="../index" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3">View Site <i class="fa-solid fa-external-link ms-1"></i></a>
         </div>
 
@@ -388,7 +421,7 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                 <!-- LIST VIEW -->
                 <div class="card-cms">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="m-0"><?= ucfirst(basename($active_tab)) ?> List</h2>
+                        <h2 class="m-0"><?= $list_title ?> List</h2>
                         <button class="btn-add" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa-solid fa-plus me-1"></i> Add New</button>
                     </div>
                     
