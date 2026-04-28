@@ -109,11 +109,17 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Shreetech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css">
     <style>
-        :root { --primary: #FD0155; --dark: #0f172a; --sidebar: #1e293b; --bg: #f8fafc; }
-        body { background: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; display: flex; height: 100vh; overflow: hidden; margin:0; }
+        :root { 
+            --primary: <?= $cust['primary_color'] ?? '#FD0155' ?>; 
+            --dark: #0f172a; 
+            --sidebar: #1e293b; 
+            --bg: <?= $cust['background_color'] ?? '#f8fafc' ?>; 
+            --font-primary: <?= $cust['font_family'] ?? "'Plus Jakarta Sans', sans-serif" ?>;
+        }
+        body { background: var(--bg); font-family: var(--font-primary) !important; display: flex; height: 100vh; overflow: hidden; margin:0; }
         
         .sidebar { width: 260px; background: var(--sidebar); color: white; display: flex; flex-direction: column; flex-shrink: 0; }
         .sidebar-header { padding: 30px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -542,6 +548,27 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                                             <img src="../<?= $val ?>" class="upload-preview active mt-3 mx-auto" style="width:150px; height:150px; border-radius:20px; border:4px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                                         </div>
                                     </div>
+                                <?php elseif($key === 'background_color'): ?>
+                                    <select name="data[<?= $key ?>]" class="form-control">
+                                        <option value="#ffffff" <?= $val === '#ffffff' ? 'selected' : '' ?>>Default White (#ffffff)</option>
+                                        <option value="#f8fafc" <?= $val === '#f8fafc' ? 'selected' : '' ?>>Light Slate (#f8fafc)</option>
+                                        <option value="#fdfbf7" <?= $val === '#fdfbf7' ? 'selected' : '' ?>>Warm Cream (#fdfbf7)</option>
+                                        <option value="#f0f4f8" <?= $val === '#f0f4f8' ? 'selected' : '' ?>>Cool Blue-Gray (#f0f4f8)</option>
+                                    </select>
+                                <?php elseif($key === 'font_family'): ?>
+                                    <select name="data[<?= $key ?>]" class="form-control">
+                                        <option value="'Plus Jakarta Sans', sans-serif" <?= strpos($val, 'Jakarta') !== false ? 'selected' : '' ?>>Plus Jakarta Sans</option>
+                                        <option value="'Inter', sans-serif" <?= strpos($val, 'Inter') !== false ? 'selected' : '' ?>>Inter</option>
+                                        <option value="'Roboto', sans-serif" <?= strpos($val, 'Roboto') !== false ? 'selected' : '' ?>>Roboto</option>
+                                        <option value="'Poppins', sans-serif" <?= strpos($val, 'Poppins') !== false ? 'selected' : '' ?>>Poppins</option>
+                                    </select>
+                                <?php elseif($key === 'primary_color'): ?>
+                                    <select name="data[<?= $key ?>]" class="form-control">
+                                        <option value="#ff0000" <?= $val === '#ff0000' ? 'selected' : '' ?>>Red (#ff0000)</option>
+                                        <option value="#007bff" <?= $val === '#007bff' ? 'selected' : '' ?>>Blue (#007bff)</option>
+                                        <option value="#28a745" <?= $val === '#28a745' ? 'selected' : '' ?>>Green (#28a745)</option>
+                                        <option value="#6f42c1" <?= $val === '#6f42c1' ? 'selected' : '' ?>>Purple (#6f42c1)</option>
+                                    </select>
                                 <?php elseif(!is_array($val)): ?>
                                     <input type="text" name="data[<?= $key ?>]" class="form-control" value="<?= htmlspecialchars($val) ?>">
                                 <?php endif; ?>

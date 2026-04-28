@@ -15,7 +15,15 @@
         "site_title": "Dr. V. Subburaj | Professor & Researcher - Personal Portfolio",
         "meta_description": "Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with expertise in Digital Image Processing, IoT Security, and R&D Innovation.",
         "primary_color": "#ff0000",
-        "logo_text": "Dr. V. Subburaj"
+        "background_color": "#ffffff",
+        "font_family": "'Inter', sans-serif",
+        "logo_text": "Dr. V. Subburaj",
+        "sidebar_image": "assets\/images\/logo\/image.png",
+        "sidebar_title": "University Professor., Researcher.",
+        "sidebar_description": "MCA., M.Phil., M.E., Ph.D Dr. V. Subburaj is a Professor, Researcher, and Entrepreneur with 20+ years of experience in academics and technology. Founder of ISRD and CEO of Shreetech.",
+        "sidebar_phone": "+91 98439-78546",
+        "sidebar_email": "drsubburajv@gmail.com",
+        "sidebar_address": "50 F, Krishna Street, SRV Nagar, Thirunagar Post, Madurai TN 625005"
     },
     "about": {
         "title": "Who I Am",
