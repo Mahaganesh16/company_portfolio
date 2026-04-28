@@ -15,7 +15,7 @@ include('header.php');
                 <div class="col-lg-12">
                     <div class="section-head text-center">
                         <div class="section-sub-title tmp-scroll-trigger tmp-fade-in">
-                            <span class="subtitle">EXPERIENCE</span>
+                            <span class="subtitle">Experience</span>
                         </div>
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Professional Journey</h2>
                     </div>
