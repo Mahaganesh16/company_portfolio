@@ -128,7 +128,7 @@ include('header.php');
             <div class="row">
                 <div class="col-lg-12">
                     <div class="personal-details-wrap bg-blur-style-one p--40 radius-10 tmp-scroll-trigger tmp-fade-in">
-                        <?php $s = $research['shreetech']; ?>
+                        <?php $s = $research['projects']; ?>
                         <h3 class="title mb--20"><?php echo $s['title']; ?></h3>
                         <p class="description">
                             <strong>Founder:</strong> <?php echo $s['founder']; ?><br>
