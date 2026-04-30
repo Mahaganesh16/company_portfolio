@@ -91,6 +91,20 @@ include('header.php');
     </section>
 
     <!-- Contact Form Section -->
+    <style>
+        .tmp-contact-form input, 
+        .tmp-contact-form textarea {
+            padding: 22px 25px !important;
+            font-size: 13px !important;
+            height: auto !important;
+        }
+        .tmp-contact-form textarea {
+            min-height: 180px !important;
+        }
+        .tmp-contact-form .btn-text {
+            font-size: 14px !important;
+        }
+    </style>
     <section class="contact-form-area tmp-section-gapBottom" id="form">
         <div class="container">
             <div class="row g-5">
@@ -117,7 +131,7 @@ include('header.php');
                                 <div class="col-lg-12 text-center">
                                     <button class="tmp-btn hover-icon-reverse radius-round w-100" type="submit">
                                         <span class="icon-reverse-wrapper">
-                                            <span class="btn-text">Send Message →</span>
+                                            <span class="btn-text">Send Message</span>
                                             <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
                                             <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
                                         </span>
