@@ -35,7 +35,7 @@ include('header.php');
                             </h4>
                             <p class="disc"><?php echo ($hero['degrees'] ?? '') . '<br>' . nl2br(trim($hero['description'])); ?></p>
                             <div class="button-area-banner-one">
-                                <?php if($cust['is_profile_setup'] ?? false): ?>
+                                <?php $validation = validate_profile($p_content); if($validation === true): ?>
                                     <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
                                         <span class="icon-reverse-wrapper">
                                             <span class="btn-text" style="color: #fff;">Download CV</span>
@@ -44,7 +44,7 @@ include('header.php');
                                         </span>
                                     </a>
                                 <?php else: ?>
-                                    <a class="tmp-btn hover-icon-reverse radius-round" href="javascript:void(0)" onclick="Swal.fire({toast: true, position: 'bottom-end', icon: 'error', title: 'Please update your profile in the admin panel before downloading the CV.', showConfirmButton: false, timer: 4000, timerProgressBar: true})" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
+                                    <a class="tmp-btn hover-icon-reverse radius-round" href="javascript:void(0)" onclick="Swal.fire({toast: true, position: 'bottom', icon: 'error', title: '<?php echo addslashes($validation); ?>', showConfirmButton: false, timer: 4000, timerProgressBar: true})" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
                                         <span class="icon-reverse-wrapper">
                                             <span class="btn-text" style="color: #fff;">Download CV</span>
                                             <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>

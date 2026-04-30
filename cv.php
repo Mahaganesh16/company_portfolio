@@ -1,16 +1,17 @@
 <?php
 require_once('functions.php');
 
-if (!($p_content['customization']['is_profile_setup'] ?? false)) {
+$validation = validate_profile($p_content);
+if ($validation !== true) {
     echo "
     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             Swal.fire({
                 toast: true,
-                position: 'bottom-end',
+                position: 'bottom',
                 icon: 'error',
-                title: 'Please update your profile in the admin panel before downloading the CV.',
+                title: '" . addslashes($validation) . "',
                 showConfirmButton: false,
                 timer: 4000,
                 timerProgressBar: true
@@ -358,7 +359,7 @@ $siteData = [
 
 <body>
 
-    <a href="index.php" class="back-btn no-print"><i class="fa-solid fa-arrow-left"></i> Back to Site</a>
+    <a href="index" class="back-btn no-print"><i class="fa-solid fa-arrow-left"></i> Back to Site</a>
 
     <button class="print-btn no-print" onclick="downloadPDF()">
         <i class="fa-solid fa-file-pdf"></i> Download PDF

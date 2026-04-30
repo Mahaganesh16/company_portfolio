@@ -6,12 +6,17 @@ if(!isset($_SESSION['admin_logged_in']) && (!isset($_COOKIE['admin_auth']) || $_
     exit;
 }
 
-$content_file = '../content.json';
-if (!file_exists($content_file)) {
-    die("Error: content.json not found in root directory.");
-}
+$static_file = '../content.json';
+$update_file = '../update_content.json';
 
-$content = json_decode(file_get_contents($content_file), true);
+if (file_exists($update_file)) {
+    $content = json_decode(file_get_contents($update_file), true);
+} else {
+    if (!file_exists($static_file)) {
+        die("Error: content.json not found in root directory.");
+    }
+    $content = json_decode(file_get_contents($static_file), true);
+}
 $cust = $content['customization'];
 $message = '';
 
@@ -39,12 +44,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['data']['social'])) $_POST['data']['social'] = array_values($_POST['data']['social']);
         }
 
+        $path = explode('.', $section);
         foreach ($_POST['data'] as $key => $value) {
-            $content[$section][$key] = $value;
+            if (count($path) == 2) {
+                $content[$path[0]][$path[1]][$key] = $value;
+            } else {
+                $content[$section][$key] = $value;
+            }
         }
         
         $content['customization']['is_profile_setup'] = true;
-        file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents($update_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Section updated successfully!";
     }
 
@@ -57,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $content[$section][] = $_POST['new_data'];
         }
         $content['customization']['is_profile_setup'] = true;
-        file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents($update_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item added successfully!";
     }
 
@@ -71,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $content[$section][$index] = $_POST['data'];
         }
         $content['customization']['is_profile_setup'] = true;
-        file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents($update_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item updated successfully!";
     }
 
@@ -85,8 +95,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             array_splice($content[$section], $index, 1);
         }
         $content['customization']['is_profile_setup'] = true;
-        file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents($update_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item deleted successfully!";
+    }
+
+    // --- RESET TO STATIC CONTENT ---
+    if (isset($_POST['reset_default'])) {
+        if (file_exists($update_file)) {
+            unlink($update_file);
+            $content = json_decode(file_get_contents($static_file), true);
+            $message = "Reset complete! Reverted to original data from content.json.";
+        } else {
+            $message = "Site is already using original content.json data.";
+        }
     }
 }
 
@@ -308,7 +329,14 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
             }
             ?>
             <h5 class="m-0">Dashboard / <?= $breadcrumb ?></h5>
-            <a href="../index" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3">View Site <i class="fa-solid fa-external-link ms-1"></i></a>
+            <div class="d-flex gap-2">
+                <form method="POST" onsubmit="return confirm('Discard all custom updates and revert to the original data in content.json?');">
+                    <button type="submit" name="reset_default" class="btn btn-sm btn-outline-danger rounded-pill px-3">
+                        <i class="fa-solid fa-rotate-left me-1"></i> Reset All
+                    </button>
+                </form>
+                <a href="../index" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill px-3">View Site <i class="fa-solid fa-external-link ms-1"></i></a>
+            </div>
         </div>
 
         <div class="content">
@@ -554,6 +582,9 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                 <!-- SINGLE SECTION VIEW -->
                 <div class="card-cms">
                     <form method="POST">
+                        <div class="mb-4 pb-3 border-bottom">
+                            <h2 class="m-0">Edit <?= ucfirst(str_replace('_', ' ', $active_tab)) ?></h2>
+                        </div>
                         <input type="hidden" name="section_key" value="<?= $active_tab ?>">
                         <?php foreach($tab_data as $key => $val): ?>
                             <?php 
@@ -611,7 +642,9 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>
-                        <button type="submit" name="save_section" class="btn-primary-cms"><i class="fa-solid fa-save me-2"></i> Save Changes</button>
+                        <div class="mt-4 pt-3">
+                            <button type="submit" name="save_section" class="btn-primary-cms w-100"><i class="fa-solid fa-save me-2"></i> Save Changes</button>
+                        </div>
                     </form>
                 </div>
 

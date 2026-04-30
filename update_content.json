@@ -1,0 +1,208 @@
+{
+    "hero": {
+        "sub_title": "ghf",
+        "title_prefix": "grfg",
+        "name": "fgfd",
+        "designations": [
+            "gfd"
+        ],
+        "degrees": "gfd",
+        "description": "gfdg",
+        "image": "assets\/images\/uploads\/69f33516b44e5.png"
+    },
+    "customization": {
+        "is_profile_setup": true,
+        "site_title": "fdg",
+        "meta_description": "gfd",
+        "primary_color": "#ff0000",
+        "background_color": "#f8fafc",
+        "font_family": "'Inter', sans-serif",
+        "logo_text": "gfd",
+        "sidebar_image": "https:\/\/placehold.co\/400x400\/f1f5f9\/64748b?text=Portrait",
+        "sidebar_title": "grdfg",
+        "sidebar_description": "gfd",
+        "sidebar_phone": "+91 2343243213",
+        "sidebar_email": "gfdgfdgfdg@email.com",
+        "sidebar_address": "fgrdgre"
+    },
+    "about": {
+        "title": "gregr",
+        "image": "https:\/\/placehold.co\/600x750\/f1f5f9\/64748b?text=Add+Your+Portrait+Image",
+        "bio": [
+            "fgretgert"
+        ],
+        "details": [
+            {
+                "key": "Full Name",
+                "value": "grdgr"
+            },
+            {
+                "key": "Email",
+                "value": "sri@gmail.com\r\n"
+            }
+        ],
+        "education": [
+            {
+                "year": "gr",
+                "title": "grd",
+                "desc": "gre"
+            }
+        ]
+    },
+    "research": {
+        "intro": "rtg",
+        "areas": [
+            {
+                "title": "gr",
+                "desc": "gre",
+                "icon": "gre"
+            }
+        ],
+        "thesis": [
+            {
+                "type": "gre",
+                "title": "hrte",
+                "uni": "rtee",
+                "year": "tre"
+            }
+        ],
+        "patents_summary": {
+            "national_count": "3",
+            "national_label": "r",
+            "intl_count": "2",
+            "intl_label": "gre",
+            "total_count": "3",
+            "total_label": "gre",
+            "utility_design_count": "2",
+            "utility_design_label": "grg"
+        },
+        "projects": {
+            "title": "rgtr",
+            "founder": "gre",
+            "ceo": "gre",
+            "desc": "tre",
+            "clients": "rte",
+            "projects": "ert"
+        }
+    },
+    "publications": {
+        "journals": [
+            {
+                "id": "[J1]",
+                "source": "ter",
+                "title": "rte",
+                "authors": "ret"
+            }
+        ],
+        "conferences": [
+            {
+                "id": "[IC1]",
+                "source": "ght",
+                "title": "Ahrt",
+                "details": "rt"
+            }
+        ],
+        "national_conferences": [
+            {
+                "id": "[NC1]",
+                "source": "hrt",
+                "title": "hrte",
+                "details": "ytr"
+            }
+        ],
+        "books": [
+            {
+                "id": "[B1]",
+                "source": "thr",
+                "title": "ygtr"
+            }
+        ]
+    },
+    "experience": {
+        "journey": [
+            {
+                "period": "yrt",
+                "role": "ytr",
+                "location": "yrt",
+                "desc": "yrtyty"
+            }
+        ],
+        "examinership": [
+            {
+                "uni": "fghfd",
+                "location": "hgfhfg",
+                "icon": "jrturu"
+            }
+        ]
+    },
+    "teaching": {
+        "subjects": [
+            {
+                "title": "ytryregc",
+                "desc": "hrtyhtr"
+            }
+        ],
+        "certifications": [
+            {
+                "title": "Afgh",
+                "desc": "htryt",
+                "icon": "yertr"
+            }
+        ],
+        "courses": [
+            {
+                "title": "hrty",
+                "desc": "hfgn"
+            }
+        ],
+        "mentoring": [
+            "hggf",
+            "hfghgf"
+        ],
+        "workshops_organized": [
+            {
+                "date": "23",
+                "title": "htfghg",
+                "location": "yhtry"
+            }
+        ],
+        "workshops_attended": [
+            "hthyt",
+            "hfthgfg"
+        ]
+    },
+    "skills": [
+        {
+            "category": "hrtyght",
+            "items": "hrtytr",
+            "icon": "ytryrt"
+        }
+    ],
+    "contact": {
+        "email": "srinithi@gmail.com",
+        "phones": [
+            "+91 34563423"
+        ],
+        "offices": [
+            {
+                "name": "rew",
+                "location": "rew"
+            }
+        ],
+        "mailing_address": "ter",
+        "social": [
+            {
+                "platform": "Linkedin",
+                "link": "#",
+                "icon": "fa-brands fa-linkedin-in"
+            }
+        ]
+    },
+    "talks": [
+        {
+            "location": "yrt",
+            "title": "yrty",
+            "desc": "ytry"
+        }
+    ]
+}

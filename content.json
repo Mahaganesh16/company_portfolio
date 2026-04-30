@@ -12,7 +12,7 @@
         "image": "https:\/\/placehold.co\/600x750\/f1f5f9\/64748b?text=Add+Portrait+Image"
     },
     "customization": {
-        "is_profile_setup": true,
+        "is_profile_setup": false,
         "site_title": "Add Site Title Here",
         "meta_description": "Add Meta Description for SEO",
         "primary_color": "#ff0000",

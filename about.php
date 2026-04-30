@@ -83,7 +83,7 @@ include('header.php');
                         <?php endforeach; ?>
                         
                         <div class="button-group mt--30 tmp-scroll-trigger tmp-fade-in">
-                            <?php if($cust['is_profile_setup'] ?? false): ?>
+                            <?php $validation = validate_profile($p_content); if($validation === true): ?>
                                 <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank">
                                     <span class="icon-reverse-wrapper">
                                         <span class="btn-text">Download Full CV</span>
@@ -92,7 +92,7 @@ include('header.php');
                                     </span>
                                 </a>
                             <?php else: ?>
-                                <a class="tmp-btn hover-icon-reverse radius-round" href="javascript:void(0)" onclick="Swal.fire({toast: true, position: 'bottom-end', icon: 'error', title: 'Please update your profile in the admin panel before downloading the CV.', showConfirmButton: false, timer: 4000, timerProgressBar: true})">
+                                <a class="tmp-btn hover-icon-reverse radius-round" href="javascript:void(0)" onclick="Swal.fire({toast: true, position: 'bottom', icon: 'error', title: '<?php echo addslashes($validation); ?>', showConfirmButton: false, timer: 4000, timerProgressBar: true})">
                                     <span class="icon-reverse-wrapper">
                                         <span class="btn-text">Download Full CV</span>
                                         <span class="btn-icon"><i class="fa-solid fa-download"></i></span>

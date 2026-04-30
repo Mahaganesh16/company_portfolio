@@ -94,12 +94,12 @@ include('header.php');
     <style>
         .tmp-contact-form input, 
         .tmp-contact-form textarea {
-            padding: 22px 25px !important;
-            font-size: 13px !important;
+            padding: 12px 20px !important;
+            font-size: 14px !important;
             height: auto !important;
         }
         .tmp-contact-form textarea {
-            min-height: 180px !important;
+            min-height: 120px !important;
         }
         .tmp-contact-form .btn-text {
             font-size: 14px !important;
