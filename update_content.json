@@ -1,198 +1,198 @@
 {
     "hero": {
-        "sub_title": "ghf",
-        "title_prefix": "grfg",
-        "name": "fgfd",
+        "sub_title": "yrty",
+        "title_prefix": "yrt",
+        "name": "yrty",
         "designations": [
-            "gfd"
+            "tryrt"
         ],
-        "degrees": "gfd",
-        "description": "gfdg",
-        "image": "assets\/images\/uploads\/69f33516b44e5.png"
+        "degrees": "rt",
+        "description": "yrtyr",
+        "image": "assets\/images\/uploads\/69f34401c4d0a.png"
     },
     "customization": {
         "is_profile_setup": true,
-        "site_title": "fdg",
-        "meta_description": "gfd",
+        "site_title": "tgrfgreter",
+        "meta_description": "tertretre",
         "primary_color": "#ff0000",
         "background_color": "#f8fafc",
         "font_family": "'Inter', sans-serif",
-        "logo_text": "gfd",
+        "logo_text": "dferwe",
         "sidebar_image": "https:\/\/placehold.co\/400x400\/f1f5f9\/64748b?text=Portrait",
-        "sidebar_title": "grdfg",
-        "sidebar_description": "gfd",
-        "sidebar_phone": "+91 2343243213",
-        "sidebar_email": "gfdgfdgfdg@email.com",
-        "sidebar_address": "fgrdgre"
+        "sidebar_title": "ty",
+        "sidebar_description": "ytrytr",
+        "sidebar_phone": "+0023123213",
+        "sidebar_email": "sri@email.com",
+        "sidebar_address": "gwrtrwe"
     },
     "about": {
-        "title": "gregr",
+        "title": "rtytr",
         "image": "https:\/\/placehold.co\/600x750\/f1f5f9\/64748b?text=Add+Your+Portrait+Image",
         "bio": [
-            "fgretgert"
+            "ytryrty"
         ],
         "details": [
             {
                 "key": "Full Name",
-                "value": "grdgr"
+                "value": "yrty"
             },
             {
                 "key": "Email",
-                "value": "sri@gmail.com\r\n"
+                "value": "ytry"
             }
         ],
         "education": [
             {
-                "year": "gr",
-                "title": "grd",
-                "desc": "gre"
+                "year": "yrty",
+                "title": "yrty",
+                "desc": "yrty"
             }
         ]
     },
     "research": {
-        "intro": "rtg",
+        "intro": "rty",
         "areas": [
             {
-                "title": "gr",
-                "desc": "gre",
-                "icon": "gre"
+                "title": "gfdger",
+                "desc": "tret",
+                "icon": "gret"
             }
         ],
         "thesis": [
             {
-                "type": "gre",
-                "title": "hrte",
-                "uni": "rtee",
-                "year": "tre"
+                "type": "tert",
+                "title": "tretr",
+                "uni": "tert",
+                "year": "tert"
             }
         ],
         "patents_summary": {
-            "national_count": "3",
-            "national_label": "r",
-            "intl_count": "2",
-            "intl_label": "gre",
+            "national_count": "4",
+            "national_label": "uytu",
+            "intl_count": "4",
+            "intl_label": "tytry",
             "total_count": "3",
-            "total_label": "gre",
-            "utility_design_count": "2",
-            "utility_design_label": "grg"
+            "total_label": "jgjhgs",
+            "utility_design_count": "3",
+            "utility_design_label": "ytyrty"
         },
         "projects": {
-            "title": "rgtr",
-            "founder": "gre",
-            "ceo": "gre",
-            "desc": "tre",
-            "clients": "rte",
-            "projects": "ert"
+            "title": "tret",
+            "founder": "ter",
+            "ceo": "rtetr",
+            "desc": "ter",
+            "clients": "tre",
+            "projects": "rtre"
         }
     },
     "publications": {
         "journals": [
             {
                 "id": "[J1]",
-                "source": "ter",
-                "title": "rte",
-                "authors": "ret"
+                "source": "ytry",
+                "title": "ytry",
+                "authors": "tr"
             }
         ],
         "conferences": [
             {
                 "id": "[IC1]",
-                "source": "ght",
-                "title": "Ahrt",
-                "details": "rt"
+                "source": "yrty",
+                "title": "yrt",
+                "details": "yrty"
             }
         ],
         "national_conferences": [
             {
                 "id": "[NC1]",
-                "source": "hrt",
-                "title": "hrte",
-                "details": "ytr"
+                "source": "tryt",
+                "title": "ytry",
+                "details": "ytry"
             }
         ],
         "books": [
             {
                 "id": "[B1]",
-                "source": "thr",
-                "title": "ygtr"
+                "source": "hgjhg",
+                "title": "jhg"
             }
         ]
     },
     "experience": {
         "journey": [
             {
-                "period": "yrt",
-                "role": "ytr",
-                "location": "yrt",
-                "desc": "yrtyty"
+                "period": "jhg",
+                "role": "jhg",
+                "location": "jhgj",
+                "desc": "jyghj"
             }
         ],
         "examinership": [
             {
-                "uni": "fghfd",
-                "location": "hgfhfg",
-                "icon": "jrturu"
+                "uni": "jhg",
+                "location": "jhgj",
+                "icon": "jghation-cap"
             }
         ]
     },
     "teaching": {
         "subjects": [
             {
-                "title": "ytryregc",
-                "desc": "hrtyhtr"
+                "title": "jhgj",
+                "desc": "jghjhg"
             }
         ],
         "certifications": [
             {
-                "title": "Afgh",
-                "desc": "htryt",
-                "icon": "yertr"
+                "title": "jhgj",
+                "desc": "jhg",
+                "icon": "jhgj"
             }
         ],
         "courses": [
             {
-                "title": "hrty",
-                "desc": "hfgn"
+                "title": "jhg",
+                "desc": "jhgj"
             }
         ],
         "mentoring": [
-            "hggf",
-            "hfghgf"
+            "jhgj",
+            "jhgj"
         ],
         "workshops_organized": [
             {
-                "date": "23",
-                "title": "htfghg",
-                "location": "yhtry"
+                "date": "jhg",
+                "title": "jhgj",
+                "location": "hg"
             }
         ],
         "workshops_attended": [
-            "hthyt",
-            "hfthgfg"
+            "jhgj",
+            "jhg"
         ]
     },
     "skills": [
         {
-            "category": "hrtyght",
-            "items": "hrtytr",
-            "icon": "ytryrt"
+            "category": "jhgj",
+            "items": "jhgj",
+            "icon": "jhg"
         }
     ],
     "contact": {
-        "email": "srinithi@gmail.com",
+        "email": "sri@email.com",
         "phones": [
-            "+91 34563423"
+            "+91 fgfgt"
         ],
         "offices": [
             {
-                "name": "rew",
-                "location": "rew"
+                "name": "tytryh",
+                "location": "yt"
             }
         ],
-        "mailing_address": "ter",
+        "mailing_address": "gtfgd",
         "social": [
             {
-                "platform": "Linkedin",
+                "platform": "ytry",
                 "link": "#",
                 "icon": "fa-brands fa-linkedin-in"
             }
@@ -200,9 +200,9 @@
     },
     "talks": [
         {
-            "location": "yrt",
+            "location": "ytry",
             "title": "yrty",
-            "desc": "ytry"
+            "desc": "yrty"
         }
     ]
 }

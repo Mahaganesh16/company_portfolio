@@ -44,6 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['data']['social'])) $_POST['data']['social'] = array_values($_POST['data']['social']);
         }
 
+        // Special case: research projects (mapped from textarea back to object)
+        if ($section === 'research' && isset($_POST['projects'])) {
+            $lines = explode("\n", $_POST['projects']);
+            $keys = ['title', 'founder', 'ceo', 'desc', 'clients', 'projects'];
+            $new_projects = [];
+            foreach ($keys as $i => $k) {
+                $new_projects[$k] = isset($lines[$i]) ? trim($lines[$i]) : "";
+            }
+            $content['research']['projects'] = $new_projects;
+            unset($_POST['data']['projects']);
+        }
+
         $path = explode('.', $section);
         foreach ($_POST['data'] as $key => $value) {
             if (count($path) == 2) {
@@ -601,8 +613,12 @@ $is_list = is_array($tab_data) && (isset($tab_data[0]) || empty($tab_data));
                             <div class="mb-3">
                                 <label class="form-label"><?= ucfirst(str_replace('_', ' ', $key)) ?></label>
                                 <?php if(is_array($val)): // Flat list like Bio/Designations ?>
-                                    <textarea name="<?= $key ?>" class="form-control" rows="6"><?= implode("\n", $val) ?></textarea>
-                                    <small class="text-muted d-block mt-n3 mb-3">Enter one item per line.</small>
+                                    <?php if ($key === 'projects' && $active_tab === 'research'): ?>
+                                        <textarea name="<?= $key ?>" class="form-control" rows="8"><?= implode("\n", $val) ?></textarea>
+                                    <?php else: ?>
+                                        <textarea name="<?= $key ?>" class="form-control" rows="6"><?= implode("\n", $val) ?></textarea>
+                                        <small class="text-muted d-block mt-n3 mb-3">Enter one item per line.</small>
+                                    <?php endif; ?>
                                 <?php elseif(is_string($val) && strlen($val) > 100): ?>
                                     <textarea name="data[<?= $key ?>]" class="form-control" rows="5"><?= $val ?></textarea>
                                 <?php elseif((strpos($key, 'image') !== false || strpos($key, 'logo') !== false || strpos($key, 'photo') !== false) && $key !== 'logo_text'): ?>

@@ -489,45 +489,14 @@ $about = $p_content['about'];
                 </div>
                 <ul class="tmp-mainmenu">
                     <li><a href="./">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li class="has-dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Research</a>
-                        <ul class="submenu">
-                            <li><a href="research.php#intro">Introduction</a></li>
-                            <li><a href="research.php#areas">Research Areas</a></li>
-                            <li><a href="research.php#thesis">M.Phil & Ph.D</a></li>
-                            <li><a href="research.php#patents">Patents</a></li>
-                            <li><a href="research.php#shreetech">Shreetech / ISRD</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Publications</a>
-                        <ul class="submenu">
-                            <li><a href="publications.php#journals">Journals</a></li>
-                            <li><a href="publications.php#intl-conferences">Intl Conferences</a></li>
-                            <li><a href="publications.php#nat-conferences">National Conferences</a></li>
-                            <li><a href="publications.php#patents">Patents</a></li>
-                            <li><a href="publications.php#books">Books</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Experience</a>
-                        <ul class="submenu">
-                            <li><a href="experience.php#journey">Professional Journey</a></li>
-                            <li><a href="experience.php#examinership">Examinership</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle-btn">Teaching</a>
-                        <ul class="submenu">
-                            <li><a href="teaching.php#subjects">Subjects</a></li>
-                            <li><a href="teaching.php#courses">Courses</a></li>
-                            <li><a href="teaching.php#mentoring">Mentoring</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="talks.php">Talks</a></li>
-                    <li><a href="skills.php">Skills</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="research">Research</a></li>
+                    <li><a href="publications">Publications</a></li>
+                    <li><a href="experience">Experience</a></li>
+                    <li><a href="teaching">Teaching</a></li>
+                    <li><a href="talks">Talks</a></li>
+                    <li><a href="skills">Skills</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
                 <div class="social-wrapper mt--40">
                     <span class="subtitle">find with me</span>
