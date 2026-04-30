@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $content[$section][$key] = $value;
         }
         
+        $content['customization']['is_profile_setup'] = true;
         file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Section updated successfully!";
     }
@@ -55,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $content[$section][] = $_POST['new_data'];
         }
+        $content['customization']['is_profile_setup'] = true;
         file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item added successfully!";
     }
@@ -68,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $content[$section][$index] = $_POST['data'];
         }
+        $content['customization']['is_profile_setup'] = true;
         file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item updated successfully!";
     }
@@ -81,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             array_splice($content[$section], $index, 1);
         }
+        $content['customization']['is_profile_setup'] = true;
         file_put_contents($content_file, json_encode($content, JSON_PRETTY_PRINT));
         $message = "Item deleted successfully!";
     }

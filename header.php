@@ -28,6 +28,8 @@ $about = $p_content['about'];
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <?php if (isset($extraStyles)) echo $extraStyles; ?>
     <style>
         :root {
@@ -37,6 +39,10 @@ $about = $p_content['about'];
         
         body {
             background-color: <?php echo $cust['background_color'] ?? '#ffffff'; ?> !important;
+        }
+
+        .swal2-toast {
+            font-size: 1.6rem !important;
         }
 
         .tmp-banner-one-area {

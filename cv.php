@@ -1,6 +1,27 @@
 <?php
 require_once('functions.php');
 
+if (!($p_content['customization']['is_profile_setup'] ?? false)) {
+    echo "
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                toast: true,
+                position: 'bottom-end',
+                icon: 'error',
+                title: 'Please update your profile in the admin panel before downloading the CV.',
+                showConfirmButton: false,
+                timer: 4000,
+                timerProgressBar: true
+            }).then(() => {
+                window.location.href = 'index.php';
+            });
+        });
+    </script>";
+    exit;
+}
+
 // Map $p_content to $siteData for compatibility with the existing CV template
 $siteData = [
     'profile' => [
@@ -132,6 +153,10 @@ $siteData = [
             line-height: 1.5;
             margin: 0;
             padding: 40px 0;
+        }
+
+        .swal2-toast {
+            font-size: 1.6rem !important;
         }
 
         .cv-container {

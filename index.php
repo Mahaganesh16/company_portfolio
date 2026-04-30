@@ -35,13 +35,23 @@ include('header.php');
                             </h4>
                             <p class="disc"><?php echo ($hero['degrees'] ?? '') . '<br>' . nl2br(trim($hero['description'])); ?></p>
                             <div class="button-area-banner-one">
-                                <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
-                                    <span class="icon-reverse-wrapper">
-                                        <span class="btn-text" style="color: #fff;">Download CV</span>
-                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
-                                        <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
-                                    </span>
-                                </a>
+                                <?php if($cust['is_profile_setup'] ?? false): ?>
+                                    <a class="tmp-btn hover-icon-reverse radius-round" href="cv.php" target="_blank" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
+                                        <span class="icon-reverse-wrapper">
+                                            <span class="btn-text" style="color: #fff;">Download CV</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
+                                        </span>
+                                    </a>
+                                <?php else: ?>
+                                    <a class="tmp-btn hover-icon-reverse radius-round" href="javascript:void(0)" onclick="Swal.fire({toast: true, position: 'bottom-end', icon: 'error', title: 'Please update your profile in the admin panel before downloading the CV.', showConfirmButton: false, timer: 4000, timerProgressBar: true})" style="background: var(--color-primary); border: 2px solid var(--color-primary); color: #fff;">
+                                        <span class="icon-reverse-wrapper">
+                                            <span class="btn-text" style="color: #fff;">Download CV</span>
+                                            <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
+                                            <span class="btn-icon"><i class="fa-solid fa-download" style="color: #fff;"></i></span>
+                                        </span>
+                                    </a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

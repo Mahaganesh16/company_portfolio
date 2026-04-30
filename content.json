@@ -1,24 +1,25 @@
 {
     "hero": {
         "sub_title": "Add Subtitle Here",
-        "title_prefix": "Add Prefix",
-        "name": "Add Your Name",
+        "title_prefix": "Add Prefix Here",
+        "name": "Add Name Here",
         "designations": [
             "Add Designation 1",
             "Add Designation 2"
         ],
         "degrees": "Add Degrees Here",
         "description": "Add a short description of yourself here.",
-        "image": "https://placehold.co/600x750/f1f5f9/64748b?text=Add+Portrait+Image"
+        "image": "https:\/\/placehold.co\/600x750\/f1f5f9\/64748b?text=Add+Portrait+Image"
     },
     "customization": {
+        "is_profile_setup": true,
         "site_title": "Add Site Title Here",
         "meta_description": "Add Meta Description for SEO",
         "primary_color": "#ff0000",
         "background_color": "#f8fafc",
         "font_family": "'Inter', sans-serif",
         "logo_text": "Add Your Name",
-        "sidebar_image": "https://placehold.co/400x400/f1f5f9/64748b?text=Portrait",
+        "sidebar_image": "https:\/\/placehold.co\/400x400\/f1f5f9\/64748b?text=Portrait",
         "sidebar_title": "Add Sidebar Title",
         "sidebar_description": "Add Sidebar Description",
         "sidebar_phone": "+00 00000-00000",
@@ -27,11 +28,11 @@
     },
     "about": {
         "title": "Add About Section Title",
-        "image": "https://placehold.co/600x750/f1f5f9/64748b?text=Add+Your+Portrait+Image",
-        "bio": {
-            "0": "Add your first biography paragraph here.",
-            "1": "Add your second biography paragraph here."
-        },
+        "image": "https:\/\/placehold.co\/600x750\/f1f5f9\/64748b?text=Add+Your+Portrait+Image",
+        "bio": [
+            "Add your first biography paragraph here.",
+            "Add your second biography paragraph here."
+        ],
         "details": [
             {
                 "key": "Full Name",
@@ -124,7 +125,7 @@
             {
                 "period": "Add Period",
                 "role": "Add Job Role",
-                "location": "Add Company/University Name",
+                "location": "Add Company\/University Name",
                 "desc": "Add Job Responsibilities"
             }
         ],
@@ -153,7 +154,7 @@
         "courses": [
             {
                 "title": "Add Course Name",
-                "desc": "Add Course Level/Description"
+                "desc": "Add Course Level\/Description"
             }
         ],
         "mentoring": [
@@ -168,8 +169,8 @@
             }
         ],
         "workshops_attended": [
-            "Add Workshop/Seminar Name 1",
-            "Add Workshop/Seminar Name 2"
+            "Add Workshop\/Seminar Name 1",
+            "Add Workshop\/Seminar Name 2"
         ]
     },
     "skills": [
